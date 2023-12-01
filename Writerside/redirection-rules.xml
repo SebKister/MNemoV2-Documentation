@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="53e31d75">
+        <description>Created after removal of "Starter" from Help Instance</description>
+        <accepts>Starter.html</accepts>
+    </rule>
+    <rule id="6178d459">
+        <description>Created after removal of "Reference" from Help Instance</description>
+        <accepts>Reference.html</accepts>
+    </rule>
+    <rule id="52ef21f">
+        <description>Created after removal of "Device Description" from Help Instance</description>
+        <accepts>Device-Description.html</accepts>
+    </rule>
+    <rule id="3344d638">
+        <description>Created after removal of "Device Description" from MNemo v2 User Manual</description>
+        <accepts>Empty-MD-Topic.html</accepts>
+    </rule>
+    <rule id="439bd264">
+        <description>Created after removal of "Tutorial" from MNemo v2 User Manual</description>
+        <accepts>Tutorial.html</accepts>
+    </rule>
+</rules>

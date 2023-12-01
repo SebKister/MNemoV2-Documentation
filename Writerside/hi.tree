@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi" name="MNemo v2 User Manual"
+                 start-page="device-description.md">
+
+    <toc-element topic="device-description.md"/>
+    <toc-element topic="Switching-Mnemo-ON.md"/>
+    <toc-element topic="Menu-Navigation.md"/>
+    <toc-element topic="Main-Menu.md"/>
+    <toc-element topic="Calibrating-the-unit.md"/>
+    <toc-element topic="Cheat-Sheet.md"/>
+</instance-profile>
