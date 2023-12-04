@@ -1,0 +1,3 @@
+# BASIC Mode
+
+Start typing here...
