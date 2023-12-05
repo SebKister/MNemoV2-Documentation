@@ -19,7 +19,11 @@
     </toc-element>
     <toc-element topic="Survey-Mode.md">
         <toc-element topic="Verbose-Mode.md"/>
-        <toc-element topic="BASIC-Mode.md"/>
+        <toc-element topic="BASIC-Mode.md">
+        </toc-element>
+        <toc-element topic="About-Stabilization.md"/>
+        <toc-element topic="Interference-Marker.md"/>
+        <toc-element topic="Surveying-The-big-picture.md"/>
     </toc-element>
     <toc-element topic="Firmware-Upgrade.md"/>
     <toc-element topic="Cheat-Sheet.md"/>

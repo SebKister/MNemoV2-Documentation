@@ -67,3 +67,9 @@ Once you reached the last shot of your section select **END**
 
 This will save the section. You are back to the main menu ready to survey the next section !
 
+## Cancelling / Retaking a measure
+
+If you want to retake a measure, there are two possibilities:
+- Either you are still in reading mode ( BLUE/PURPLE background ), in this case just select BACK and you can retake the measure you were taking.
+- You finished the measure ( WHITE background waiting for next measure), in this case you can select UNDO to erase the last saved measure and take it again.
+
