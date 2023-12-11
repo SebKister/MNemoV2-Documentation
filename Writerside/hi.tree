@@ -27,6 +27,11 @@
     </toc-element>
     <toc-element topic="MNEMOLINK.md"/>
     <toc-element topic="WIFI-Data-transfer.md"/>
+    <toc-element topic="Survey-History.md"/>
+    <toc-element topic="memory.md"/>
+    <toc-element topic="Display-Settings.md"/>
+    <toc-element topic="Battery.md"/>
+    <toc-element topic="tipsandtricks.md"/>
     <toc-element topic="BASIC-Mode-Clicks.md"/>
     <toc-element topic="Firmware-Upgrade.md"/>
     <toc-element topic="Cheat-Sheet.md"/>

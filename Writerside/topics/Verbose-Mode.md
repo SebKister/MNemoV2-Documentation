@@ -44,6 +44,7 @@ The display will show a RED square:
 > Don’t hold the device in your hand, rather support it from beneath so it can use the tension in the line to self align and take the most accurate measurement possible.
 
 The display shows a blue or purple square with a dot in it when the compass has measured the first azimuth.
+
 ![readingVerbose.jpg](readingVerbose.jpg){width=200}
 
 You can now move the device along the line all the way to the next station.
