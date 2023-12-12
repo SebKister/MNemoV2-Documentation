@@ -26,4 +26,8 @@
         <description>Created after removal of "Tutorial" from MNemo v2 User Manual</description>
         <accepts>Tutorial.html</accepts>
     </rule>
+    <rule id="40fb9048">
+        <description>Created after removal of "Cheat Sheet" from MNemo v2 User Manual</description>
+        <accepts>Cheat-Sheet.html</accepts>
+    </rule>
 </rules>
