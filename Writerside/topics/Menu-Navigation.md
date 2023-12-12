@@ -2,9 +2,10 @@
 
 Each menu will have an active or selected item that will be surrounded by **>….<** or highlighted.
 
-<img alt="menuverti.jpg" height="128" src="menuverti.jpg" width="128"/>
+![screencap1702386075.png](screencap1702386075_1.png)
 
-<img alt="menuhori.jpg" height="128" src="menuhori.jpg" width="128"/>
+![screencap1702386094.png](screencap1702386094.png)
+
 
 Moving the slider to the **right** is shifting the selected item to the next one (Either on the right or beneath). 
 	

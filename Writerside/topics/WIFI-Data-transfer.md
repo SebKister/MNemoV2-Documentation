@@ -7,6 +7,7 @@
 - Click Get Current to get the list of the current networks. ( This list is empty when you buy the device)
 - Enter the name and the password of your network
 - Press Add New and the network will appear in the list
+> The network name and password should not contain |Space| characters and be on 2.4GHz.
 
 ![mnemolink-wifi.png](mnemolink-wifi.png)
 

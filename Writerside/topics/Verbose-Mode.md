@@ -4,7 +4,8 @@
 From the main menu select **SURVEY**
 The screen will display options similar to:
 
-![nameverbose.jpg](nameverbose.jpg){width=200}
+![screencap1702386471.png](screencap1702386471.png)
+
 
 In this menu you can choose the name of the section you are surveying.
 
@@ -16,7 +17,8 @@ The menu will display two options, select which direction you are surveying, IN 
 - **IN** means you are going from already surveyed stations to new ones 
 - **OUT** means you are coming from new stations going towards already known ones.
 
-![INOUT.jpg](INOUT.jpg){width=200}
+![screencap1702386497.png](screencap1702386497.png)
+
 
 >NOTE : The reference shot that you had in Mnemo v1 are no longer used in v2
 
@@ -31,11 +33,13 @@ To survey a shot:
 
 Select **START**
 
-![menuhori.jpg](menuhori_1.jpg){width=200}
+![screencap1702386517.png](screencap1702386517.png)
+
 
 The display will show a RED square: 
 
-![stabilizeVerbose.jpg](stabilizeVerbose.jpg){width=200}
+![screencap1702386533.png](screencap1702386533.png)
+
 
 
 **_At that point the device is waiting to be stabilized to measure the azimuth._**
@@ -45,7 +49,8 @@ The display will show a RED square:
 
 The display shows a blue or purple square with a dot in it when the compass has measured the first azimuth.
 
-![readingVerbose.jpg](readingVerbose.jpg){width=200}
+![screencap1702387226.png](screencap1702387226.png)
+
 
 You can now move the device along the line all the way to the next station.
 The display will be flickering that BLUE/PURPLE square indicating that the wheel is spinning and measuring the length of the line.

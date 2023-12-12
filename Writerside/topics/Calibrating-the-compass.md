@@ -16,13 +16,11 @@ You must rotate slowly (as in one full rotation per 4s) randomly the Mnemo on al
 
 If you are not using the _fast calibration_ mode, the device will expect a measures uniformly distributed in the 3D sphere around it. That can take some time and practice to get done.
 
-
-![startcal.jpg](startcal.jpg){width=200}
+![screencap1702386279.png](screencap1702386279.png)
 
 The display will show a red progress bar indicating the advance or the calibration process.
 
-![endcalibration.jpg](endcalibration.jpg){width=200}
-
+![screencap1702386404.png](screencap1702386404.png)
 
 Once the calibration gets close to completion it will turn green and you’ll have more information displayed on the screen
 
