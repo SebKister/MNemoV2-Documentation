@@ -21,6 +21,8 @@
         <toc-element topic="Verbose-Mode.md"/>
         <toc-element topic="BASIC-Mode.md">
         </toc-element>
+        <toc-element topic="BASIC-Mode-Clicks.md"/>
+        <toc-element topic="LRUD.md"/>
         <toc-element topic="About-Stabilization.md"/>
         <toc-element topic="Interference-Marker.md"/>
         <toc-element topic="Surveying-The-big-picture.md"/>
@@ -31,9 +33,8 @@
     <toc-element topic="memory.md"/>
     <toc-element topic="Display-Settings.md"/>
     <toc-element topic="Battery.md"/>
+    <toc-element topic="Extras.md"/>
+    <toc-element topic="Firmware-Upgrade.md"/>
     <toc-element topic="tipsandtricks.md"/>
     <toc-element topic="Maintenance.md"/>
-    <toc-element topic="BASIC-Mode-Clicks.md"/>
-    <toc-element topic="Firmware-Upgrade.md"/>
-    <toc-element topic="Extras.md"/>
 </instance-profile>

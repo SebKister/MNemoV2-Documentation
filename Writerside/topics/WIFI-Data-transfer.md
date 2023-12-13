@@ -9,21 +9,23 @@
 - Press Add New and the network will appear in the list
 > The network name and password should not contain |Space| characters and be on 2.4GHz.
 
-![mnemolink-wifi.png](mnemolink-wifi.png)
+  ![mnemolink-wifi.png](mnemolink-wifi.png)
 
 - On your Mnemo navigate to **OPTIONS > WIFI (OFF)**
-![wifi_scan.jpg](wifi_scan.jpg){width=200}
-The Mnemo will than try to connect to the known networks.
-![wifi_connect.jpg](wifi_connect.jpg){width=200}
- If successful it will come back to main menu and _**display the IP address of the device**_.
 
-![wifi_ip.jpg](wifi_ip.jpg){width=200}
+  ![screencap1702387436.png](screencap1702387436.png)
+- The Mnemo will than try to connect to the known networks.
+
+- If successful it will come back to main menu and _**display the IP address of the device**_.
+
+  ![screencap1702462281_mod.png](screencap1702462281_mod.png)
+>The icon in the top left corner indicates the strength of the wifi connection betwenn the router and the MNemo.
 
 You can now navigate in your favorite internet browser to the displayed IP address and click on the Download DMP link or preview the surveys
 
-![browser_main.png](browser_main.png){width=320}
+  ![browser_main.png](browser_main.png){width=320}
 
-![browser_map.png](browser_map.png){width=320}
+  ![browser_map.png](browser_map.png){width=320}
 
 ## The Mnemo as Wifi Access Point ##
 
