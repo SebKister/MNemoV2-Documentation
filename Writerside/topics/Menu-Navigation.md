@@ -1,6 +1,6 @@
 # Menu Navigation
 
-Each menu will have an active or selected item that will be surrounded by **>….<** or highlighted.
+Each menu will have an active or selected item that will be surrounded by **>….<** or **highlighted**.
 
 ![screencap1702386075.png](screencap1702386075_1.png)
 

@@ -1,4 +1,4 @@
-# Survey Modes
+# Survey Operations
 
 The Mnemo has two survey mode, you can select which one you preferably want to use in 
 

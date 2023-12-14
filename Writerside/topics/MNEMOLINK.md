@@ -23,7 +23,7 @@ The blue led indicates that the connection to the computer/charger was successfu
 Turn on MNemo. At that point your computer should have recognized the device.
 
 ## Launch MNemoLink ##
-At this point you can launch MnemoLink application on your computer.
+You can now launch MnemoLink application on your computer.
 
 > If “Mnemo not detected” appears in the right corner, make sure the connector is properly placed on the Mnemo 
 and the device is turned ON than press the refresh button in the middle of MNemoLink's window.

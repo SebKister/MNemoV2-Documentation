@@ -1,4 +1,4 @@
-# BASIC Mode
+# BASIC Mode ( Recommended )
 
 From the main menu select **SURVEY**
 >NOTE: The KNOT mode of Mnemo v1 has been removed

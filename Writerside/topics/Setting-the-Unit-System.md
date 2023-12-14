@@ -4,3 +4,5 @@ You can select either the metric system ( using meter and ºC) or the imperial s
 In the menu navigate to :
 
 **OPTIONS > SETTINGS > UNIT** _(m or ft)_ to select the active unit system.
+
+> The unit system used on the device can be different from the one used in your mapping software

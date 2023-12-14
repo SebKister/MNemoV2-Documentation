@@ -8,7 +8,7 @@ You’ll find a list of Tools
 - **GAUGE**: A depth gauge indicating depth and absolute pressure
 - **TEST**: A mode to test the reading of all sensors, pressure, magnetometer, inclinometer etc
 - **ONE-GO(OFF)**: _NOT DOCUMENTED, leave on OFF_
-- **WIFI_AP(OFF)**: When turned on the device will create a Wi-Fi access point _( SSID: **Mnemo** Passord: **password**)_  to directly read the data on the Mnemo without the need of a local Wi-Fi network.
+- **WIFI_AP(OFF)**: When turned on the device will create a Wireless Access Point _( SSID: **Mnemo** Passord: **password**)_  to directly read the data on the Mnemo without the need of a local wireless network.
 - **MAGNETO** : Magnetic analysis tool 
 
 You can use the Magneto feature to analysis how strongly your dive equipment affects magnetic reading.

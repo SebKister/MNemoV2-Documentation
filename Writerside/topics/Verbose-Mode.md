@@ -11,9 +11,10 @@ In this menu you can choose the name of the section you are surveying.
 
 _Section_ in this case means the section of the survey which can differ from the section of the cave you are working in. 
 
-In our example the section is called AA1. You can navigate from one letter to the other moving the slider to the right and change the current letter by moving the slider to the left. Once done select OK.
+In our example the section is called AA1. You can navigate from one letter to the other moving the slider to the _right_
+and change the current letter by moving the slider to the _left_. Once done select OK.
 
-The menu will display two options, select which direction you are surveying, IN or OUT.
+The menu will give you the choice of the direction you are surveying, IN or OUT.
 - **IN** means you are going from already surveyed stations to new ones 
 - **OUT** means you are coming from new stations going towards already known ones.
 
@@ -36,7 +37,7 @@ Select **START**
 ![screencap1702386517.png](screencap1702386517.png)
 
 
-The display will show a RED square: 
+The display will show a _RED_ square: 
 
 ![screencap1702386533.png](screencap1702386533.png)
 
@@ -47,7 +48,7 @@ The display will show a RED square:
 > **THE ONE THING TO REMEMBER FROM THIS USER MANUAL:**
 > Don’t hold the device in your hand, rather support it from beneath so it can use the tension in the line to self align and take the most accurate measurement possible.
 
-The display shows a blue or purple square with a dot in it when the compass has measured the first azimuth.
+The display shows a _BLUE_ or _PURPLE_ square with a dot in it when the compass has measured the first azimuth.
 
 ![screencap1702387226.png](screencap1702387226.png)
 
