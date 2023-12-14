@@ -35,6 +35,6 @@
     <toc-element topic="MNEMOLINK.md"/>
     <toc-element topic="WIFI-Data-transfer.md"/>
     <toc-element topic="Firmware-Upgrade.md"/>
-    <toc-element topic="tipsandtricks.md"/>
     <toc-element topic="Maintenance.md"/>
+    <toc-element topic="tipsandtricks.md"/>
 </instance-profile>
