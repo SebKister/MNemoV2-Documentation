@@ -3,7 +3,7 @@
         SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
 
 <instance-profile id="mnemo" name="MNemo v2 User Manual"
-                  start-page="device-description.md">
+                  start-page="Starter.md">
 
     <toc-element topic="Starter.md"/>
     <toc-element topic="device-description.md"/>
