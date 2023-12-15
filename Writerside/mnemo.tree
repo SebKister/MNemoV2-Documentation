@@ -6,6 +6,7 @@
                   start-page="Starter.md">
 
     <toc-element topic="Starter.md"/>
+    <toc-element topic="Changelog.md"/>
     <toc-element topic="device-description.md"/>
     <toc-element topic="Switching-Mnemo-ON.md"/>
     <toc-element topic="Menu-Navigation.md"/>

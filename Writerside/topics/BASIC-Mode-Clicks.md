@@ -1,7 +1,7 @@
-# BASIC Mode Clicks
+# BASIC Mode Click Commands
 
 
-This is a new feature introduced in v2.5.4
+_This is a new feature introduced in v2.5.4_
 
 Whereas the BASIC mode uses long clicks to validate the main commands you can use shorter click combinations for auxiliary actions in BASIC mode:
 - You can **add a marker** ![marker.png](marker.png) with a unique ID to a station: 
@@ -14,7 +14,9 @@ Whereas the BASIC mode uses long clicks to validate the main commands you can us
 - You can access the **[LRUD](LRUD.md)** entry mode:
 
     **RIGHT-RIGHT-RIGHT-LEFT**
-
+> In Basic mode when you do short clicks you'll notice dots appearing at the top of the screen, RED for left clicks and GREEN for right, they are here to help you enter click commands
+> 
+  ![screencap1702387379_clicks.png](screencap1702387379_clicks.png) 
 
 
 
