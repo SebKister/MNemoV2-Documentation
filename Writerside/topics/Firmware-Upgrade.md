@@ -1,6 +1,6 @@
 # Firmware Update
 
-- Download the latest firmware on Github ( It’s a file with a .UF2 extension)
+- Download the [latest firmware](https://github.com/SebKister/Mnemo-V2/releases) on Github ( It’s a file with a .UF2 extension)
 - Connect the device to your computer and go to:
 
 **OPTIONS > SETTINGS > UPDATE**
