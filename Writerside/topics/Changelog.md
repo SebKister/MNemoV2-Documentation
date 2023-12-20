@@ -1,5 +1,12 @@
 # Change Log
 
+## v2.6.0 ##
+
+- Added 2 new [click sequences](BASIC-Mode-Clicks.md), active during "Stand By", to set survey direction in BASIC mode. LEFT-LEFT-LEFT-LEFT for IN survey and RIGHT-RIGHT-RIGHT-RIGHT for OUT survey.
+- During the _**Stand By**_ screen a index of the click combination is displayed.
+- In basic mode Naming of section is now incremental ( B01,B02 etc ), counter gets reset when memory is.
+- The name of the section as well as the direction get displayed beneath the shot counter
+
 ## v2.5.4 ##
 
 - Add a marker with a unique ID to a station in basic mode by using a combination of clicks: LEFT-LEFT-LEFT-RIGHT
