@@ -1,6 +1,10 @@
 # Change Log
 
-## v2.6.0 ##
+
+## MNemoLink v1.4.0 ##
+- Automated firmware update process
+
+## Firmware v2.6.0 ##
 
 - Added 2 new [click sequences](BASIC-Mode-Clicks.md), active during "Stand By", to set survey direction in BASIC mode. LEFT-LEFT-LEFT-LEFT for IN survey and RIGHT-RIGHT-RIGHT-RIGHT for OUT survey.
 - During the _**Stand By**_ screen a index of the click combination is displayed.
