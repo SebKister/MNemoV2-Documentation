@@ -34,3 +34,13 @@ Navigate to OPTIONS > EXTRAS > WIFI AP(OFF) and select the entry.
 
 You can than connect your computer (or phone) to the wireless network created _( SSID: **Mnemo** Passord: **password**)_ 
 and navigate to the displayed IP address as you would do on your local network.
+
+## Network Scan and data download with MNemoLink ##
+
+You can use MNemoLink to scan your Network and find your MNemo.
+
+![Screenshot 2024-01-25 075328.png](Screenshot_2024-01-25_075328.png)
+
+Once it is found you can download the data through the wifi.
+
+![Screenshot 2024-01-25 075618.png](Screenshot_2024-01-25_075618.png)
