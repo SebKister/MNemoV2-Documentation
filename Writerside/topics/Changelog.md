@@ -1,8 +1,14 @@
 # Change Log
 
+## MNemoLink v1.4.1 ##
+- Network scan for MNemo
+- Support for Android platform
 
 ## MNemoLink v1.4.0 ##
 - Automated firmware update process
+
+## Firmware v2.6.1 ##
+- Support for MNemoLink network scan
 
 ## Firmware v2.6.0 ##
 
