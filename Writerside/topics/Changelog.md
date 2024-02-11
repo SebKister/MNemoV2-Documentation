@@ -1,6 +1,6 @@
 # Change Log
 
-## MNemoLink v1.4.1 ##
+## MNemoLink v1.4.5 ##
 - Network scan for MNemo
 - Support for Android platform
 
