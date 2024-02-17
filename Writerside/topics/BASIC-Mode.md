@@ -31,8 +31,13 @@ You’ll notice a flashing _**green**_ screen displaying STANDBY or an icon as w
 - Once stabilized the background becomes white again, you are back in READY mode.
 ![screencap1702909377.png](screencap1702909377.png)
 - You can repeat the operation for the following shots.
+> ![INOUT](curve32.png)
+> 
 > The curve icon you can see in the last picture indicates that the measurement of the azimuth at the start and the end of the shot has a difference of more than 5 degrees.
 > 
+> ![](depthissue.png)
+> 
+> You might also find this icon which signals the change in depth is bigger than the length of the line. This usually happens on very steep shots.  
 > 
 Once you have finished the section, when you are in READY mode, to save the section move the cursor to the right.
 This will save the data and put the device back in STANDBY mode ( Blinking GREEN).
