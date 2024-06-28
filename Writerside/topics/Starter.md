@@ -1,5 +1,5 @@
 # Version  
-This user manual applies to firmware v2.6.2 and higher.
+This user manual applies to firmware v2.6.5 and higher.
 
 _This firmware requires MNemoLink 1.4.5 / Ariane 24.1.1 or higher._
 > the latest firmware is available [here](https://github.com/SebKister/Mnemo-V2/releases) and 
