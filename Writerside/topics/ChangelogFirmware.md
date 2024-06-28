@@ -1,12 +1,19 @@
 # Change Log Firmware
+## v2.6.5 ##
+- Completed settings available on the webpage of the MNemo. Date/Time can now be synchronized through a web browser.
+- Units get displayed for depth length and azimuth readings
+- Added moving arrow progress indicator option instead of blinking background. Option available in Setting menu.
+- Improvement of UI display, flickering and dirty pixels removed.
+- Optional address parameter for command "getdata" allowing to read MNemos memory after reset.
+- LRUD for survey OUT is now recorded at WHITE phase of station IN
 
-## Firmware v2.6.2 ##
+## v2.6.2 ##
 - Added icon ![](depthissue.png) to signal the depth variation is bigger than length of line.
 
-## Firmware v2.6.1 ##
+## v2.6.1 ##
 - Support for MNemoLink network scan
 
-## Firmware v2.6.0 ##
+## v2.6.0 ##
 
 - Added 2 new [click sequences](BASIC-Mode-Clicks.md), active during "Stand By", to set survey direction in BASIC mode. LEFT-LEFT-LEFT-LEFT for IN survey and RIGHT-RIGHT-RIGHT-RIGHT for OUT survey.
 - During the _**Stand By**_ screen a index of the click combination is displayed.
