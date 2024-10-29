@@ -13,7 +13,7 @@ You can enter LRUD ( Left-Right-Up-Down) measurement (or estimation) values to d
 
 - In BASIC Mode, you enter the LRUD menu when you are on the READY screen ( the one with WHITE background) with a click combination:
 
-    **LEFT-RIGHT-LEFT-RIGHT**
+    **RIGHT-RIGHT-RIGHT-LEFT**
 
 Once you are on the LRUD entry screen you increase the value moving the cursor left and go to the next value moving it right.
 
