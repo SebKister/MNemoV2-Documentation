@@ -1,4 +1,14 @@
 # Change Log Firmware
+
+## v2.6.7 ##
+- Display the angle difference in imprecision warning
+- In Basic mode when LRUD is activated in settings, it will be displayed at the end of each station
+- The section name in Verbose mode is checked for uniqueness
+- Change distance display format when distance >100ft or m
+- Using MNemo given name instead of fixed SSID for Wifi(AP) name
+- Text display optimization
+- Fixed bug in Map display mode that could lead to device lock.
+
 ## v2.6.5 ##
 - Completed settings available on the webpage of the MNemo. Date/Time can now be synchronized through a web browser.
 - Units get displayed for depth length and azimuth readings
