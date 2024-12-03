@@ -29,11 +29,11 @@ You’ll notice a flashing _**green**_ screen displaying STANDBY or an icon as w
 - Once you reach the end of the shot hold the slider left again, the background turns RED, you are in STABILIZE mode.
 ![screencap1702387334.png](screencap1702387334_1.png)
 - Once stabilized the background becomes white again, you are back in READY mode.
-![screencap1702909377.png](screencap1702909377.png)
+  ![screencap1730996323.png](../images/screencap1730996323.png)
 - You can repeat the operation for the following shots.
 > ![INOUT](curve32.png)
 > 
-> The curve icon you can see in the last picture indicates that the measurement of the azimuth at the start and the end of the shot has a difference of more than 5 degrees.
+> The curve icon you can see in the last picture indicates that the measurement of the azimuth at the start and the end of the shot has a difference of more than 5 degrees.  The exact difference is displayed over the curve ( In the example we have 7deg of difference)
 > 
 > ![](depthissue.png)
 > 

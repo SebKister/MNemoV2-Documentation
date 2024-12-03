@@ -2,7 +2,7 @@
 
 You can enter LRUD ( Left-Right-Up-Down) measurement (or estimation) values to describe the corridor section of the cave at each station.
 
-- In Verbose survey mode this is done by going to 
+- This is done by going to 
 
 
     **OPTIONS > SETTINGS > LRUD(LIST or INC)**
@@ -11,7 +11,7 @@ You can enter LRUD ( Left-Right-Up-Down) measurement (or estimation) values to d
     - _**INC**_ : In this mode the numerical value will increase gradually. It is the slowest of the two modes but allows to enter precise values
     - **_LIST_** : In this mode the numerical value will increase according to a predetermined set of lengths. It's the fastest mode and typically the one used when value are estimated rather than measured.
 
-- In BASIC Mode, you enter the LRUD menu when you are on the READY screen ( the one with WHITE background) with a click combination:
+- In BASIC Mode, you can also enter the LRUD menu for chosen stations when you are on the READY screen ( the one with WHITE background) with a click combination:
 
     **RIGHT-RIGHT-RIGHT-LEFT**
 
