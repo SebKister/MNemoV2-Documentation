@@ -22,14 +22,18 @@ You’ll notice a flashing _**green**_ screen displaying STANDBY or an icon as w
 ![screencap1702908903.png](screencap1702908903.png)
 > By default, in any BASIC survey mode all surveys are recorded IN and are named “BAS”. You can then later sort out the data on your favorite survey software.
 - Clip the device on the line at the beginning of the first shot.
-- Hold the slider left the background turns RED, you are in STABILIZE mode ( same as in Verbose survey mode). 
+- Hold the slider left the background turns RED, you are in STABILIZE mode ( same as in Verbose survey mode).
+
 ![screencap1702387334.png](screencap1702387334.png)
 - Once stabilized, the device goes in READING mode, you can now move along the line, you’ll recognize the flickering BLUE/VIOLET square you already had in Verbose survey mode indicating the wheel is measuring the line
+
 ![screencap1702909323.png](screencap1702909323.png)
 - Once you reach the end of the shot hold the slider left again, the background turns RED, you are in STABILIZE mode.
+
 ![screencap1702387334.png](screencap1702387334_1.png)
 - Once stabilized the background becomes white again, you are back in READY mode.
-  ![screencap1730996323.png](../images/screencap1730996323.png)
+
+![screencap1730996323.png](../images/screencap1730996323.png)
 - You can repeat the operation for the following shots.
 > ![INOUT](curve32.png)
 > 

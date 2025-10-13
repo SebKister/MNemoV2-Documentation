@@ -1,5 +1,8 @@
 # Change Log Firmware
 
+## v2.6.9 ##
+- Added check to avoid memory overflow in history build on startup
+- Avg and Max depth display values were swapped
 
 ## v2.6.8 ##
 - Fixed bug that had date reset on each startup since 1/1/25
