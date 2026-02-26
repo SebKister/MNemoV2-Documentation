@@ -23,9 +23,9 @@
 
 You can now navigate in your favorite internet browser to the displayed IP address and click on the Download DMP link or preview the surveys
 
-  ![browser_main.png](/img/browser_main.png){width=320}
+  ![browser_main.png](/img/browser_main.png)
 
-  ![browser_map.png](/img/browser_map.png){width=320}
+  ![browser_map.png](/img/browser_map.png)
 
 ## The Mnemo as Wireless Access Point ##
 

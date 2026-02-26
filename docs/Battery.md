@@ -4,7 +4,7 @@
 - The Mnemo can be recharged using either the USB port of your computer or a dedicated charger. It requires no more than 150mA charging current.
 - The red LED indicates that the charge is in progress. It will turn off when the charge is complete.
 
-![ledindicator.jpg](/img/ledindicator_1.jpg){width=200}
+![ledindicator.jpg](/img/ledindicator_1.jpg)
 
 It is recommended to have the Mnemo turned OFF before connecting for a charge.
 
