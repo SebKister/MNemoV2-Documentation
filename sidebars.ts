@@ -1,0 +1,56 @@
+import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+
+const sidebars: SidebarsConfig = {
+  tutorialSidebar: [
+    'Starter',
+    'ChangelogFirmware',
+    'device-description',
+    'Switching-Mnemo-ON',
+    'Menu-Navigation',
+    'Main-Menu',
+    {
+      type: 'category',
+      label: 'Calibrating the Unit',
+      link: { type: 'doc', id: 'Calibrating-the-unit' },
+      items: [
+        'Setting-the-Unit-System',
+        'Calibrating-the-distance-measurement',
+        'Calibrating-the-compass',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Survey Mode',
+      link: { type: 'doc', id: 'Survey-Mode' },
+      items: [
+        'BASIC-Mode',
+        'BASIC-Mode-Clicks',
+        'Verbose-Mode',
+        'Recording-Surface-pressure',
+        'LRUD',
+        'Interference-Marker',
+        'About-Stabilization',
+        'Surveying-The-big-picture',
+      ],
+    },
+    'Survey-History',
+    'memory',
+    {
+      type: 'category',
+      label: 'Settings',
+      items: [
+        'Setting-the-water-type',
+        'Display-Settings',
+      ],
+    },
+    'Battery',
+    'Extras',
+    'MNEMOLINK',
+    'WIFI-Data-transfer',
+    'Firmware-Upgrade',
+    'Maintenance',
+    'tipsandtricks',
+  ],
+};
+
+export default sidebars;

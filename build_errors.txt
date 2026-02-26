@@ -1,0 +1,91 @@
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/doc/node_modules/@docusaurus/mdx-loader/lib/index.js??ruleSet[1].rules[8].use[0]!/doc/docs/ChangelogFirmware.md': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> Error -> VFileMessage
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/doc/node_modules/@docusaurus/mdx-loader/lib/index.js??ruleSet[1].rules[8].use[0]!/doc/docs/Menu-Navigation.md': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> Error -> VFileMessage
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/doc/node_modules/@docusaurus/mdx-loader/lib/index.js??ruleSet[1].rules[8].use[0]!/doc/docs/Extras.md': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> Error -> VFileMessage
+[ERROR] Client bundle compiled with errors therefore further build is impossible.
+Error: MDX compilation failed for file "/doc/docs/BASIC-Mode.md"
+Cause: Markdown image with URL `../images/screencap1730996323.png` in source file "docs/BASIC-Mode.md" (36:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+Details:
+Error: Markdown image with URL `../images/screencap1730996323.png` in source file "docs/BASIC-Mode.md" (36:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+    at async Promise.all (index 0)
+
+--------------------------
+
+Error: MDX compilation failed for file "/doc/docs/ChangelogFirmware.md"
+Cause: Unexpected character `2` (U+0032) before name, expected a character that can start a name, such as a letter, `$`, or `_`
+Details:
+{
+  "column": 56,
+  "file": "",
+  "message": "Unexpected character `2` (U+0032) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "line": 59,
+  "name": "59:56",
+  "place": {
+    "_bufferIndex": 53,
+    "_index": 0,
+    "line": 59,
+    "column": 56,
+    "offset": 3104
+  },
+  "reason": "Unexpected character `2` (U+0032) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "ruleId": "unexpected-character",
+  "source": "micromark-extension-mdx-jsx",
+  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
+}
+
+--------------------------
+
+Error: MDX compilation failed for file "/doc/docs/Extras.md"
+Cause: Unexpected end of file before name, expected a character that can start a name, such as a letter, `$`, or `_`
+Details:
+{
+  "column": 127,
+  "file": "",
+  "message": "Unexpected end of file before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "line": 19,
+  "name": "19:127",
+  "place": {
+    "_bufferIndex": -1,
+    "_index": 1,
+    "line": 19,
+    "column": 127,
+    "offset": 1001
+  },
+  "reason": "Unexpected end of file before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "ruleId": "unexpected-eof",
+  "source": "micromark-extension-mdx-jsx",
+  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-end-of-file-at-expected-expect"
+}
+
+--------------------------
+
+Error: MDX compilation failed for file "/doc/docs/Menu-Navigation.md"
+Cause: Unexpected character `*` (U+002A) before name, expected a character that can start a name, such as a letter, `$`, or `_`
+Details:
+{
+  "column": 81,
+  "file": "",
+  "message": "Unexpected character `*` (U+002A) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "line": 3,
+  "name": "3:81",
+  "place": {
+    "_bufferIndex": 80,
+    "_index": 0,
+    "line": 3,
+    "column": 81,
+    "offset": 101
+  },
+  "reason": "Unexpected character `*` (U+002A) before name, expected a character that can start a name, such as a letter, `$`, or `_`",
+  "ruleId": "unexpected-character",
+  "source": "micromark-extension-mdx-jsx",
+  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"
+}
+npm notice
+npm notice New minor version of npm available! 11.6.2 -> 11.11.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.0
+npm notice To update run: npm install -g npm@11.11.0
+npm notice

@@ -1,0 +1,9 @@
+
+> temp-docusaurus@0.0.0 build
+> docusaurus build
+
+[INFO] [en] Creating an optimized production build...
+[webpackbar] ℹ Compiling Client
+[webpackbar] ℹ Compiling Server
+[webpackbar] ✔ Server: Compiled with some errors in 37.33s
+[webpackbar] ✔ Client: Compiled with some errors in 1.11m
