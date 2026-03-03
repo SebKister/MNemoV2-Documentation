@@ -2,6 +2,7 @@
 
 You will notice that the bottom line of the menu is displaying a stream of  information:
 
+| Display | Description |
 | ----------- | ----------- |
 | 26/03 11:26 27.6ºC | _Day/Month  Hour:Minute Water Temperature_ |
 | 84% (FW)(m) M:0% | _Battery Charge %  - Type of water - Unit - Memory usage_ |
