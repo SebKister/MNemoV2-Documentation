@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'MNemo v2 User Manual',
   tagline: 'User Guide for MNemo v2',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logoMN.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
