@@ -41,6 +41,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'Setting-the-water-type',
         'Display-Settings',
+        'Language',
       ],
     },
     'Battery',
