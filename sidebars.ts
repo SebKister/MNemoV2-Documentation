@@ -43,6 +43,7 @@ const sidebars: SidebarsConfig = {
         'Display-Settings',
       ],
     },
+    'Date-Synchronization',
     'Battery',
     'Extras',
     'MNEMOLINK',
