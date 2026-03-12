@@ -10,11 +10,9 @@
 
 From the main menu select
 
-**OPTIONS > SETTINGS > SENSORS > COMPASS > CALIBRATE** _or_ **CALIBRATE FAST**
+**OPTIONS > SETTINGS > SENSORS > COMPASS > CALIBRATE**
 
 You must rotate slowly (as in one full rotation per 4s) randomly the Mnemo on all of its 3 axis in order to perform the calibration.
-
-If you are not using the _fast calibration_ mode, the device will expect a measures uniformly distributed in the 3D sphere around it. That can take some time and practice to get done.
 
 ![screencap1702386279.png](/img/screencap1702386279.png)
 
@@ -33,7 +31,7 @@ GEOF is the approximation of the magnetic field at that location. The compass of
 
 
 > I can’t insist enough on the fact that there’s NO WAY to get a precise survey without a precise and correct calibration of the compass.
-> The average calibration time is 1min in fast mode and up to 10min in standard calibration. If the calibration is not finished after 10min, turn MNemo off and on again and restart the calibration. 
+> The average calibration time is around 1 minute. If the calibration is not finished after 10min, turn MNemo off and on again and restart the calibration.
 
 
 

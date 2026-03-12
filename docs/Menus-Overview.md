@@ -68,8 +68,7 @@ graph LR
         Calibration --> CalWheel
         Calibration --> StabFactor
 
-        CalCompass --> CalCompStd(Standard)
-        CalCompass --> CalCompFast(Fast)
+        CalCompass --> CalCompFast(Calibrate)
 
         CalPressure --> CalSurface(Surface Pressure)
         CalPressure --> WaterType(Water Type)
