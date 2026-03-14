@@ -61,14 +61,14 @@ graph LR
         CalCompass(Compass)
         CalPressure(Pressure)
         CalWheel(Wheel)
-        StabFactor(Stabilization Factor)
 
         Calibration --> CalCompass
         Calibration --> CalPressure
         Calibration --> CalWheel
-        Calibration --> StabFactor
 
         CalCompass --> CalCompFast(Calibrate)
+        CalCompass --> CalComp3Plane(3-Plane)
+        CalCompass --> StabFactorComp(Stabilization Factor)
 
         CalPressure --> CalSurface(Surface Pressure)
         CalPressure --> WaterType(Water Type)
