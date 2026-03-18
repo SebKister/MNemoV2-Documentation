@@ -53,6 +53,7 @@ const sidebars: SidebarsConfig = {
     'Firmware-Upgrade',
     'Maintenance',
     'tipsandtricks',
+    'Report-an-Issue',
   ],
 };
 
