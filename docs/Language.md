@@ -1,6 +1,6 @@
 # Language
 
-The MNemo on-device interface is available in four languages. Navigate to:
+The MNemo on-device interface is available in five languages. Navigate to:
 
 **OPTIONS > SETTINGS > DEVICE SETTINGS > LANGUAGE**
 
@@ -10,6 +10,7 @@ You will see the list of available languages:
 - **ESPANOL**
 - **FRANCAIS**
 - **DEUTSCH**
+- **PINYIN** — Mandarin Chinese rendered in Pinyin romanisation with tone marks (e.g. ā, ǎ, è)
 
 The currently active language is marked with a `<-` arrow. Select a different entry to switch immediately — all on-device menus, prompts and feedback messages update at once.
 
