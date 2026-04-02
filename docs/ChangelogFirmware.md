@@ -1,8 +1,20 @@
 # Change Log Firmware
 
+## v3.0.0 ##
+
+- **Multilingual UI**: on-device menus and messages are now available in English, Spanish, French, German and Mandarin Chinese (Pinyin). Language can be changed at any time in OPTIONS > SETTINGS > DEVICE SETTINGS > LANGUAGE.
+- **3D map view**: when viewing a survey map (from History or BASIC mode shortcut), press the select button to cycle between 2D map, 3D perspective view and statistics. In 3D mode the device orientation controls the camera angle.
+- **WiFi at Start**: new option (OPTIONS > WIFI > WIFI ON AT START) to automatically connect to a known network on every power-on.
+- **Web interface network management**: WiFi networks can now be added and removed directly from the device's built-in web page, without MNemoLink.
+- **Menu reorganisation**: Settings is now split into *Device Settings* (display, units, language) and *System* (update, reset). The Extras menu is renamed to Tools and WiFi has its own dedicated submenu under Options.
+- **Button auto-calibration**: performing 4 consecutive clicks on either side of the slider automatically calibrates the button press-force threshold.
+
 ## v2.6.9 ##
 - Added check to avoid memory overflow in history build on startup
 - Avg and Max depth display values were swapped
+- Fixed marker counter initialisation bug
+- Added button threshold auto-calibration (4 consecutive clicks on either side)
+- Settings are now saved when modified from the web interface
 
 ## v2.6.8 ##
 - Fixed bug that had date reset on each startup since 1/1/25

@@ -14,7 +14,7 @@ If so, it will allow you to update the firmware automatically to the latest vers
 - Download the [latest firmware](https://github.com/SebKister/Mnemo-V2/releases) on Github ( It’s a file with a .UF2 extension)
 - Connect the device to your computer and go to:
 
-**OPTIONS > SETTINGS > UPDATE**
+**OPTIONS > SETTINGS > SYSTEM > UPDATE**
 
 
 > The device should appear in your file explorer as a USB Memory stick would.

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mnemo – Hardware / Software Failure Report</title>
+  <style>
+    /* ── Base ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11pt;
+      color: #111;
+      background: #fff;
+      padding: 20mm 18mm;
+      max-width: 210mm;
+      margin: 0 auto;
+    }
+
+    /* ── Header ───────────────────────────────────────────── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2.5px solid #111;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-left img {
+      height: 52px;
+      width: auto;
+    }
+
+    .header-title h1 {
+      font-size: 17pt;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+
+    .header-title h2 {
+      font-size: 11pt;
+      font-weight: 400;
+      color: #444;
+      margin-top: 2px;
+    }
+
+    .header-meta {
+      text-align: right;
+      font-size: 9pt;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .header-meta .ref-box {
+      display: inline-block;
+      border: 1px solid #999;
+      padding: 3px 40px 3px 6px;
+      font-size: 9pt;
+      margin-top: 4px;
+    }
+
+    /* ── Section headings ─────────────────────────────────── */
+    .section {
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      background: #111;
+      color: #fff;
+      font-size: 9.5pt;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 3px 7px;
+      margin-bottom: 8px;
+    }
+
+    /* ── Grid layout for fields ───────────────────────────── */
+    .grid {
+      display: grid;
+      gap: 6px 16px;
+    }
+
+    .grid-2  { grid-template-columns: 1fr 1fr; }
+    .grid-3  { grid-template-columns: 1fr 1fr 1fr; }
+    .grid-14 { grid-template-columns: 1fr 4fr; }
+    .grid-12 { grid-template-columns: 1fr 2fr; }
+
+    /* ── Individual field ─────────────────────────────────── */
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .field label {
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: #444;
+    }
+
+    .field .line {
+      border-bottom: 1px solid #555;
+      min-height: 18px;
+      width: 100%;
+    }
+
+    .field .line-tall {
+      border: 1px solid #999;
+      min-height: 48px;
+      width: 100%;
+      padding: 3px;
+    }
+
+    .field .line-xtall {
+      border: 1px solid #999;
+      min-height: 72px;
+      width: 100%;
+      padding: 3px;
+    }
+
+    /* ── Checkbox groups ──────────────────────────────────── */
+    .check-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      align-items: flex-start;
+      padding-top: 2px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 10pt;
+      white-space: nowrap;
+    }
+
+    .check-item .box {
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      border: 1.5px solid #333;
+      flex-shrink: 0;
+    }
+
+    /* ── Severity scale ───────────────────────────────────── */
+    .severity-scale {
+      display: flex;
+      gap: 0;
+      border: 1px solid #999;
+      overflow: hidden;
+      width: fit-content;
+    }
+
+    .severity-scale .sev-cell {
+      padding: 5px 12px;
+      font-size: 9pt;
+      text-align: center;
+      border-right: 1px solid #999;
+      line-height: 1.2;
+    }
+
+    .severity-scale .sev-cell:last-child { border-right: none; }
+    .severity-scale .sev-label { font-weight: 700; font-size: 10pt; }
+
+    /* ── Horizontal rule divider ──────────────────────────── */
+    .divider {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 10px 0;
+    }
+
+    /* ── Inline note ──────────────────────────────────────── */
+    .note {
+      font-size: 8pt;
+      color: #666;
+      font-style: italic;
+      margin-top: 3px;
+    }
+
+    /* ── Signature row ────────────────────────────────────── */
+    .sig-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    /* ── Footer ───────────────────────────────────────────── */
+    .footer {
+      border-top: 1px solid #999;
+      margin-top: 18px;
+      padding-top: 6px;
+      font-size: 8pt;
+      color: #777;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ── Print ────────────────────────────────────────────── */
+    @media print {
+      body {
+        padding: 10mm 14mm;
+        font-size: 10.5pt;
+      }
+
+      .no-print { display: none !important; }
+
+      @page {
+        size: A4 portrait;
+        margin: 12mm 14mm;
+      }
+
+      .page-break { page-break-before: always; }
+    }
+
+    /* ── Screen helper button ─────────────────────────────── */
+    .print-btn {
+      display: block;
+      margin: 0 auto 20px auto;
+      padding: 10px 28px;
+      background: #111;
+      color: #fff;
+      border: none;
+      font-size: 11pt;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+    }
+
+    .print-btn:hover { background: #333; }
+  </style>
+</head>
+<body>
+
+  <!-- Screen-only print button -->
+  <button class="print-btn no-print" onclick="window.print()">&#128438; Print / Save as PDF</button>
+
+  <!-- ── HEADER ──────────────────────────────────────────── -->
+  <div class="header">
+    <div class="header-left">
+      <img src="img/MNLogo128.png" alt="Mnemo Logo">
+      <div class="header-title">
+        <h1>Mnemo</h1>
+        <h2>Hardware &amp; Software Failure Report</h2>
+      </div>
+    </div>
+    <div class="header-meta">
+      Report date: <span style="border-bottom:1px solid #999;display:inline-block;width:90px;">&nbsp;</span><br>
+      Report #:
+      <div class="ref-box">&nbsp;</div>
+    </div>
+  </div>
+
+  <!-- ── 1. DEVICE INFORMATION ───────────────────────────── -->
+  <div class="section">
+    <div class="section-title">1 — Device Information</div>
+    <div class="grid grid-3">
+      <div class="field">
+        <label>Serial Number</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Firmware Version</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Hardware Revision</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Date of Purchase</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Purchased From</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Approximate Total Dive Hours</label>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2. REPORTER INFORMATION ─────────────────────────── -->
+  <div class="section">
+    <div class="section-title">2 — Reporter Information</div>
+    <div class="grid grid-2">
+      <div class="field">
+        <label>Full Name</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Email Address</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Country</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Diver Certification Level (optional)</label>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 3. ISSUE CLASSIFICATION ─────────────────────────── -->
+  <div class="section">
+    <div class="section-title">3 — Issue Classification</div>
+
+    <div class="grid grid-2" style="margin-bottom:10px;">
+      <div class="field">
+        <label>Issue Type — check all that apply</label>
+        <div class="check-group" style="margin-top:4px;">
+          <div class="check-item"><div class="box"></div> Hardware / Mechanical</div>
+          <div class="check-item"><div class="box"></div> Software / Firmware</div>
+          <div class="check-item"><div class="box"></div> Connectivity (Wi-Fi / USB)</div>
+          <div class="check-item"><div class="box"></div> Sensor / Compass</div>
+          <div class="check-item"><div class="box"></div> Display / Screen</div>
+          <div class="check-item"><div class="box"></div> Battery / Power</div>
+          <div class="check-item"><div class="box"></div> Waterproofing / Leak</div>
+          <div class="check-item"><div class="box"></div> Other</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Severity — circle or tick one</label>
+        <div style="margin-top:6px;">
+          <div class="severity-scale">
+            <div class="sev-cell"><div class="sev-label">1</div>Minor</div>
+            <div class="sev-cell"><div class="sev-label">2</div>Moderate</div>
+            <div class="sev-cell"><div class="sev-label">3</div>Major</div>
+            <div class="sev-cell"><div class="sev-label">4</div>Critical</div>
+          </div>
+          <div class="note" style="margin-top:5px;">
+            1 = Cosmetic / nuisance &nbsp;|&nbsp; 2 = Degraded function &nbsp;|&nbsp;
+            3 = Feature unusable &nbsp;|&nbsp; 4 = Device unusable / safety risk
+          </div>
+        </div>
+        <div style="margin-top:10px;">
+          <label>Reproducible?</label>
+          <div class="check-group" style="margin-top:4px;">
+            <div class="check-item"><div class="box"></div> Always</div>
+            <div class="check-item"><div class="box"></div> Sometimes</div>
+            <div class="check-item"><div class="box"></div> Only once</div>
+            <div class="check-item"><div class="box"></div> Unknown</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>If "Other" issue type, specify</label>
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <!-- ── 4. DIVE CONDITIONS AT TIME OF INCIDENT ──────────── -->
+  <div class="section">
+    <div class="section-title">4 — Conditions at Time of Incident</div>
+    <div class="grid grid-3">
+      <div class="field">
+        <label>Date of Incident</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Time (approx.)</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Dive Number on that day</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Max Depth (m)</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Water Temperature (°C)</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Dive Duration at incident (min)</label>
+        <div class="line"></div>
+      </div>
+    </div>
+
+    <div style="margin-top:8px;">
+      <label style="font-size:8pt;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;color:#444;">
+        Active Dive Mode at time of incident — check one
+      </label>
+      <div class="check-group" style="margin-top:4px;">
+        <div class="check-item"><div class="box"></div> Standby / Surface</div>
+        <div class="check-item"><div class="box"></div> Recording (Basic)</div>
+        <div class="check-item"><div class="box"></div> Recording (With Compass)</div>
+        <div class="check-item"><div class="box"></div> Navigation / Waypoint</div>
+        <div class="check-item"><div class="box"></div> Calibration</div>
+        <div class="check-item"><div class="box"></div> Menu / Settings</div>
+        <div class="check-item"><div class="box"></div> Not during a dive</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 5. FAILURE DESCRIPTION ──────────────────────────── -->
+  <div class="section">
+    <div class="section-title">5 — Failure Description</div>
+    <div class="field" style="margin-bottom:8px;">
+      <label>Describe what happened (be as specific as possible)</label>
+      <div class="line-xtall"></div>
+    </div>
+    <div class="field" style="margin-bottom:8px;">
+      <label>What were you doing immediately before the failure occurred?</label>
+      <div class="line-tall"></div>
+    </div>
+    <div class="field">
+      <label>What did you expect the device to do vs. what it actually did?</label>
+      <div class="line-tall"></div>
+    </div>
+  </div>
+
+  <!-- ── 6. STEPS TO REPRODUCE ───────────────────────────── -->
+  <div class="section">
+    <div class="section-title">6 — Steps to Reproduce (if known)</div>
+    <div style="display:grid;grid-template-columns:24px 1fr;gap:4px 8px;align-items:end;">
+      <span style="font-size:9pt;color:#888;text-align:right;">1.</span><div class="line"></div>
+      <span style="font-size:9pt;color:#888;text-align:right;">2.</span><div class="line"></div>
+      <span style="font-size:9pt;color:#888;text-align:right;">3.</span><div class="line"></div>
+      <span style="font-size:9pt;color:#888;text-align:right;">4.</span><div class="line"></div>
+      <span style="font-size:9pt;color:#888;text-align:right;">5.</span><div class="line"></div>
+    </div>
+  </div>
+
+  <!-- ── 7. HISTORY & ADDITIONAL NOTES ───────────────────── -->
+  <div class="section">
+    <div class="section-title">7 — History &amp; Additional Notes</div>
+    <div class="grid grid-2" style="margin-bottom:8px;">
+      <div class="field">
+        <label>Has this issue occurred before?</label>
+        <div class="check-group" style="margin-top:4px;">
+          <div class="check-item"><div class="box"></div> Yes</div>
+          <div class="check-item"><div class="box"></div> No</div>
+        </div>
+      </div>
+      <div class="field">
+        <label>If yes — how many times?</label>
+        <div class="line"></div>
+      </div>
+      <div class="field">
+        <label>Device been repaired or modified before?</label>
+        <div class="check-group" style="margin-top:4px;">
+          <div class="check-item"><div class="box"></div> Yes</div>
+          <div class="check-item"><div class="box"></div> No</div>
+        </div>
+      </div>
+      <div class="field">
+        <label>If yes — describe modification / repair</label>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Any other observations, error messages displayed, or relevant context</label>
+      <div class="line-tall"></div>
+    </div>
+  </div>
+
+  <!-- ── 8. ATTACHMENTS ──────────────────────────────────── -->
+  <div class="section">
+    <div class="section-title">8 — Attachments (tick all included)</div>
+    <div class="check-group">
+      <div class="check-item"><div class="box"></div> Photo(s) of device</div>
+      <div class="check-item"><div class="box"></div> Video of failure</div>
+      <div class="check-item"><div class="box"></div> Dive log / track file (.mnemo / .csv)</div>
+      <div class="check-item"><div class="box"></div> Screenshot / screen recording</div>
+      <div class="check-item"><div class="box"></div> None</div>
+    </div>
+    <div class="note" style="margin-top:5px;">
+      When submitting electronically, attach files to your email or issue report. Label files with your name and date.
+    </div>
+  </div>
+
+  <!-- ── 9. DECLARATION & SIGNATURE ──────────────────────── -->
+  <div class="section">
+    <div class="section-title">9 — Declaration</div>
+    <p style="font-size:9pt;color:#444;margin-bottom:8px;line-height:1.5;">
+      I confirm that the information provided in this report is accurate to the best of my knowledge.
+      I consent to the Mnemo development team contacting me at the email address above to follow up on this report.
+    </p>
+    <div class="sig-row">
+      <div class="field">
+        <label>Signature</label>
+        <div class="line" style="min-height:30px;"></div>
+      </div>
+      <div class="field">
+        <label>Date</label>
+        <div class="line" style="min-height:30px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <div class="footer">
+    <span>Mnemo Underwater Survey Computer</span>
+    <span>Submit reports to: <strong>sebastien@arianesline.com</strong> &nbsp;|&nbsp; <a href="https://github.com/Ariane-s-Line/Mnemo-V2-Releases/issues" target="_blank">GitHub Issues</a></span>
+  </div>
+
+</body>
+</html>

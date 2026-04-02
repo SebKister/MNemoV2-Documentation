@@ -7,6 +7,7 @@ const sidebars: SidebarsConfig = {
     'device-description',
     'Switching-Mnemo-ON',
     'Menu-Navigation',
+    'Menus-Overview',
     'Main-Menu',
     {
       type: 'category',
@@ -23,6 +24,7 @@ const sidebars: SidebarsConfig = {
       label: 'Survey Mode',
       link: { type: 'doc', id: 'Survey-Mode' },
       items: [
+        'Survey-Flow',
         'BASIC-Mode',
         'BASIC-Mode-Clicks',
         'Verbose-Mode',
@@ -41,6 +43,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'Setting-the-water-type',
         'Display-Settings',
+        'Language',
       ],
     },
     'Battery',
@@ -50,6 +53,7 @@ const sidebars: SidebarsConfig = {
     'Firmware-Upgrade',
     'Maintenance',
     'tipsandtricks',
+    'Report-an-Issue',
   ],
 };
 

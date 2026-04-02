@@ -1,10 +1,36 @@
-# Display Settings
+# Device Settings
 
-You can adjust the orientation of the display by going to :
+Display and device preferences are grouped under:
 
-**OPTIONS > SETTINGS > LCD ORIENT.(X)**
+**OPTIONS > SETTINGS > DEVICE SETTINGS**
 
-Each time you click on the menu entry the screen will rotate 90 degrees.
+---
 
-Below that setting you'll find the display contrast adjustment, its value goes from 2 to 16, 16 being the brightest.
+## Screen Orientation
 
+Navigate to **OPTIONS > SETTINGS > DEVICE SETTINGS > LCD ORIENT.(X)**
+
+Each time you click on the menu entry the screen rotates 90 degrees.
+
+---
+
+## Display Contrast
+
+Navigate to **OPTIONS > SETTINGS > DEVICE SETTINGS > CONTRAST**
+
+The contrast value goes from 2 to 16, with 16 being the brightest.
+
+---
+
+## Language
+
+Navigate to **OPTIONS > SETTINGS > DEVICE SETTINGS > LANGUAGE**
+
+The on-device interface is available in four languages:
+
+- **ENGLISH**
+- **ESPANOL**
+- **FRANCAIS**
+- **DEUTSCH**
+
+The currently active language is marked with a `<-` arrow next to it. Select a different entry to switch languages immediately. The setting is saved to device memory and persists across power cycles.

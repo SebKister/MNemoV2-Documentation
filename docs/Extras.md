@@ -1,25 +1,29 @@
-# Extras
+# Tools
 
-Navigate to :
-**OPTIONS > EXTRAS**
+Navigate to:
+**OPTIONS > TOOLS**
 
-You’ll find a list of Tools
+You'll find a list of diagnostic and analysis tools:
 
-- **GAUGE**: A depth gauge indicating depth and absolute pressure
-- **TEST**: A mode to test the reading of all sensors, pressure, magnetometer, inclinometer etc
+- **Depth Gauge**: A depth gauge indicating depth and absolute pressure
+- **Test Mode**: A mode to test the reading of all sensors — pressure, magnetometer, inclinometer, etc.
 - **ONE-GO(OFF)**: _NOT DOCUMENTED, leave on OFF_
-- **WIFI_AP(OFF)**: When turned on the device will create a Wireless Access Point _( SSID: **Mnemo** Passord: **password**)_  to directly read the data on the Mnemo without the need of a local wireless network.
-- **MAGNETO** : Magnetic analysis tool 
+- **MAGNETO**: Magnetic analysis tool
 
-You can use the Magneto feature to analysis how strongly your dive equipment affects magnetic reading.
+> WiFi Access Point mode has moved to **OPTIONS > WIFI > WIFI AP**. See [Wireless Data Transfer](WIFI-Data-transfer.md) for details.
 
-> The earth magnetic fields goes from 25uT to 65uT depending on your location.
+## Magneto
 
-By moving the Mnemo closer or further from your equipment you’ll get a reading of the strength of the magnetic field that is created.
+You can use the Magneto feature to analyse how strongly your dive equipment affects magnetic readings.
+
+> The earth magnetic field ranges from 25 µT to 65 µT depending on your location.
+
+By moving the Mnemo closer to or further from your equipment you'll get a reading of the strength of the magnetic field created by that equipment.
+
 - Here you can see that the magnetic field is between 32.92 and 33.44 when the device is left without any outside disturbance
 
 ![20221008_162530.jpg](/img/20221008_162530.jpg)
 
-- When we move a dive light around the Mnemo the magnetic field is this time fluctuating between 30.55 and 37.49 which is a huge difference !
+- When we move a dive light around the Mnemo the magnetic field is this time fluctuating between 30.55 and 37.49 — a huge difference!
 
 ![20221008_162632.jpg](/img/20221008_162632.jpg)
