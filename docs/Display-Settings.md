@@ -26,11 +26,13 @@ The contrast value goes from 2 to 16, with 16 being the brightest.
 
 Navigate to **OPTIONS > SETTINGS > DEVICE SETTINGS > LANGUAGE**
 
-The on-device interface is available in four languages:
+The on-device interface is available in six languages:
 
 - **ENGLISH**
 - **ESPANOL**
 - **FRANCAIS**
 - **DEUTSCH**
+- **ZH (SIMP)** — Simplified Chinese (Mainland)
+- **ZH (TRAD)** — Traditional Chinese (Taiwan)
 
 The currently active language is marked with a `<-` arrow next to it. Select a different entry to switch languages immediately. The setting is saved to device memory and persists across power cycles.
