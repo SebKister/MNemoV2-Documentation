@@ -100,7 +100,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Docs',
+          title: 'Web',
           items: [
             {
               label: 'Ariane\'s Line',
