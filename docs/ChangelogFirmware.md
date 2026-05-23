@@ -2,7 +2,7 @@
 
 ## v3.1.0 ##
 
-- **WiFi QR onboarding**: when WiFi is turned on the OLED shows a QR code so a phone can join the network and open the web page without typing the SSID, password or IP address. Works in both Access Point (two QR codes: join then open-page) and local-network (single open-page QR) modes. The QR dismisses itself once the web page actually loads, or with NEXT / SELECT.
+- **WiFi QR onboarding**: when WiFi is turned on the OLED shows a QR code so a phone can join the network and open the web page without typing the SSID, password or IP address. Works in both Access Point (two QR codes: join then open-page) and local-network (single open-page QR) modes. The QR dismisses itself once the web page actually loads, or with **NEXT** / **SELECT**.
 - **Interactive 3D survey view on the web interface**: the 2D `/View` map now has a **View in 3D** button that opens a full-screen 3D viewer. Orbit (left-drag / one-finger), dolly (right-drag), zoom (wheel / pinch) and click a station to re-centre on it. A base-plane grid and a compass-rose East/North/Up widget help with orientation.
 - **Depth-coloured survey paths**: the path on the web 2D map is now drawn as per-segment lines coloured by depth (**blue = deepest, red = highest**) instead of a near-invisible flat line. The on-device OLED depth gradient is reversed to match, so the on-device and web views share a single colour convention.
 - **Cleaner WiFi signal-strength icons**: the four RSSI icons on the OLED are now visibly distinct (regenerated at 16×16).
