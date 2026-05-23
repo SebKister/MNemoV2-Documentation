@@ -62,7 +62,7 @@ When you turn WiFi on, the Mnemo shows a **QR code** on the OLED so you don't ha
 
 ### Local network (WIFI ON/OFF)
 
-Once the Mnemo connects to your network it shows a QR code containing the page address (`http://<device-ip>`). Open your phone or computer's camera, point it at the screen, and tap the prompt to open the Mnemo's web page directly.
+Once the Mnemo connects to your network it shows a QR code containing the page address (`http://<device-ip>`). Open your phone or computer camera app, point it at the screen, and tap the prompt to open the Mnemo's web page directly.
 
 ### Access Point (WIFI AP)
 
