@@ -52,7 +52,9 @@ Open a browser and navigate to the displayed IP address to preview surveys or do
 
 Navigate to **OPTIONS > WIFI > WIFI ON AT START** and toggle the option on.
 
-When enabled, the device will automatically attempt to connect to a known network every time it powers on — no manual menu navigation needed.
+When enabled, the device automatically starts its **WiFi Access Point** every time it powers on. The Access Point shuts itself off after **30 seconds** if no one connects to it, so it doesn't drain the battery when unused.
+
+> Combined with the QR onboarding below, this makes opening the Mnemo's web page on your phone right after switching the device on a two-scan operation.
 
 ---
 
