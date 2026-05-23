@@ -58,7 +58,7 @@ When enabled, the device will automatically attempt to connect to a known networ
 
 ## WiFi QR onboarding *(v3.1.0+)*
 
-When you turn WiFi on the Mnemo shows a **QR code** on the OLED so you don't have to type the network name, password or IP address on your phone.
+When you turn WiFi on, the Mnemo shows a **QR code** on the OLED so you don't have to type the network name, password or IP address on your phone.
 
 ### Local network (WIFI ON/OFF)
 
