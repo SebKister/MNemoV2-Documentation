@@ -56,6 +56,25 @@ When enabled, the device will automatically attempt to connect to a known networ
 
 ---
 
+## WiFi QR onboarding *(v3.1.0+)*
+
+When you turn WiFi on the Mnemo shows a **QR code** on the OLED so you don't have to type the network name, password or IP address on your phone.
+
+### Local network (WIFI ON/OFF)
+
+Once the Mnemo connects to your network it shows a QR code containing the page address (`http://<device-ip>`). Open your phone or computer's camera, point it at the screen, and tap the prompt to open the Mnemo's web page directly.
+
+### Access Point (WIFI AP)
+
+In AP mode the onboarding happens in two stages:
+
+1. **Join QR** — encodes the AP credentials (`SSID: Mnemo`, `Password: password`). Point your phone's camera at it and tap the prompt to join the Mnemo's network — no typing.
+2. **Open-page QR** — appears automatically once your phone associates with the AP. Scan it to open the Mnemo's page in the browser. The QR dismisses itself the moment the page actually loads, returning the OLED to its normal screen.
+
+You can dismiss either QR at any time with the device's **NEXT** or **SELECT** buttons.
+
+---
+
 ## The Mnemo as Wireless Access Point
 
 If your local network is not accessible you can configure the MNemo as a Wireless Access Point.
