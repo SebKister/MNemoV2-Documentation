@@ -8,8 +8,6 @@ You will notice that the bottom line of the menu is displaying a stream of  info
 | 84% (FW)(m) M:0% | _Battery Charge %  - Type of water - Unit - Memory usage_ |
 
  
-The date and time format can be adjusted in [MNemoLink](https://www.arianesline.com/mnemo/), the software used to interface the Mnemo with your computer. 
-It is synchronized automatically with the date/time of your computer each time you connect it and download the data within the software.
->Tip: If the date is not set or set incorrectly it will be adjusted to a default date. You’ll get a message indicating this when you turn the Mnemo on.
+Both the date/time itself and its display format (Day/Month or Month/Day) can be set from the device's built-in web page over WiFi. See [Date and Time Synchronization](Date-Synchronization.md) for the full procedure and details on the consequences of skipping it.
 
-For full details on synchronizing the date and time and the potential issues that may arise when it has not been done prior to a survey, see [Date and Time Synchronization](Date-Synchronization.md).
+>Tip: If the date is not set or set incorrectly it will be adjusted to a default date. You'll get a **DATE RESET** message when you turn the Mnemo on.

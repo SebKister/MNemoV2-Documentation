@@ -4,30 +4,40 @@ The MNemo v2 stores the date and time of each survey. It is important to ensure 
 
 ## How to Synchronize the Date and Time
 
-The simplest way to synchronize the date and time is through **MNemoLink**:
+### From the web interface (recommended)
 
-1. Connect the MNemo to your computer using the USB cable (see [MNemoLink - Data Transfer](MNEMOLINK.md)).
-2. Launch MNemoLink and ensure the device is recognized.
-3. The date and time are **synchronized automatically** each time you connect the device and download data within MNemoLink.
+The easiest way to set the clock is from the device's built-in web page over WiFi — no extra software needed.
 
-> **Tip:** Make it a habit to connect your MNemo to MNemoLink and download your data before every dive trip to ensure the clock is always up to date.
+1. Turn WiFi on (see [Wireless Data Transfer](WIFI-Data-transfer.md)) and open the Mnemo's page in your browser. *(v3.1.0+: scan the QR code shown on the OLED.)*
+2. Open the **Settings** page from the top menu.
+3. Under **Time & Format → Date & time**, tap **Synchronize date & time**.
+
+The device clock is set to the **current date and time of the browser** (i.e. your phone or computer). Two taps and you're done.
+
+> **Tip:** Make it a habit to open the Mnemo page and tap the sync button at the start of every dive trip.
+
+### Over the USB serial console (advanced)
+
+Power users can also sync the clock over USB by sending the `syncdatetime` command on the device's serial port (57600 baud) followed by 5 bytes (year minus 2000, month, day, hour, minute). This is the protocol that desktop helper tools use under the hood.
 
 ## Checking the Current Date and Time
 
-You can verify the current date and time directly on the device from the **Main Menu**. The bottom status line displays:
+You can verify the current date and time directly on the device from the **Main Menu**. The bottom status line shows:
 
 | Display | Description |
 | ----------- | ----------- |
-| 26/03 11:26 27.6ºC | _Day/Month  Hour:Minute Water Temperature_ |
+| 26/03 11:26 27.6ºC | _Day/Month  Hour:Minute  Water Temperature_ |
 
-If the date and time look incorrect, connect the device to MNemoLink to resynchronize.
+The Day/Month order can be swapped to Month/Day on the web Settings page (**Time & Format → Date format**).
+
+If the date and time look incorrect, follow the steps above to resynchronize.
 
 ## Potential Issues When the Date Has Not Been Synchronized
 
 If the device's clock has not been synchronized, the following issues can arise:
 
-- **Incorrect survey timestamps**: Each survey is recorded with a date and time. If the clock is wrong, it will be difficult to match a survey to the date of the actual dive.
-- **Default date fallback**: If the internal clock has lost its settings (e.g., due to a fully depleted battery), the device will fall back to a default date. A warning message will be displayed when the Mnemo is turned on to alert you to this situation.
-- **Data management confusion**: When reviewing surveys in MNemoLink or your cave survey software, incorrect dates make it harder to organize and identify dives, especially when multiple surveys are stored on the device.
+- **Incorrect survey timestamps**: each survey is recorded with a date and time. If the clock is wrong, it will be difficult to match a survey to the date of the actual dive.
+- **Default date fallback**: if the internal clock has lost its settings (for example after a fully depleted battery), the device falls back to a default date. A **DATE RESET** warning is shown for a few seconds when the Mnemo is turned on to alert you.
+- **Data-management confusion**: when reviewing surveys in your cave-survey software, incorrect dates make it harder to organise and identify dives, especially when multiple surveys are stored on the device.
 
-> **Important:** If you receive a message about an incorrect or default date when turning on your MNemo, connect it to MNemoLink before your dive to resynchronize the clock.
+> **Important:** if you see the **DATE RESET** warning when turning on your MNemo, resynchronize the clock from the web interface before your next dive.
