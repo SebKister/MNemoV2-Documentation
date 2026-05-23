@@ -6,7 +6,7 @@ The MNemo v2 stores the date and time of each survey. It is important to ensure 
 
 ### From the web interface (recommended)
 
-The easiest way to set the clock is from the device's built-in web page over WiFi — no extra software needed.
+The easiest way to set the clock is from the device's built-in web page over WiFi — no extra software beyond a browser once WiFi is available.
 
 1. Turn WiFi on (see [Wireless Data Transfer](WIFI-Data-transfer.md)) and open the Mnemo's page in your browser. *(v3.1.0+: scan the QR code shown on the OLED.)*
 2. Open the **Settings** page from the top menu.
