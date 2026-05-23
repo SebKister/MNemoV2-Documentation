@@ -36,9 +36,32 @@ When a map is displayed — whether from History or from the BASIC mode shortcut
 
 ### 3D Map
 
-The 3D view renders the survey in perspective with depth-based colour (bright at the start, darker towards the end of the survey). Three reference axes are shown at the origin:
+The 3D view renders the survey in perspective with depth-based colour: **blue = deepest, red = highest** (since v3.1.0; the on-device gradient now matches the web view's). Three reference axes are shown at the origin:
 - **Yellow** arrow — vertical (UP)
 - **Red** arrow — North
 - **Blue** arrow — East
 
 The camera angle is controlled by the **IMU** — simply tilt and rotate the device to change the viewing direction. The camera framing adjusts automatically to fit the entire survey in view.
+
+---
+
+## Web Interface
+
+When connected over WiFi (see [Wireless Data Transfer](WIFI-Data-transfer.md)), every recorded survey can be viewed in your browser as well as on the OLED.
+
+### 2D survey map
+
+From the device's main web page, clicking a survey opens the `/View` page: a top-down SVG map of the survey path. *(v3.1.0+)* The path is drawn as per-segment lines coloured by depth — **blue = deepest, red = highest** — so it stands out clearly against the dark background. Stations are marked with circles (yellow at the start, red elsewhere).
+
+### Interactive 3D viewer *(v3.1.0+)*
+
+On the 2D map page a **▶ View in 3D** button opens `/View3D`, a full-screen interactive 3D viewer of the same survey. Controls:
+
+| Action | Mouse | Touch |
+| --- | --- | --- |
+| Orbit | Left-drag | One-finger drag |
+| Dolly (camera distance) | Right-drag up/down | — |
+| Zoom | Scroll wheel | Pinch |
+| Re-centre on a station | Click the station | Tap the station |
+
+A base-plane grid is drawn at the deepest survey point, and a small compass-rose axes widget (East / North / Up) sits in the lower-left corner. Use the **← 2D** link at the top-left to return to the 2D map.
