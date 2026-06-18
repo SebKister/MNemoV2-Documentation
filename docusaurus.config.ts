@@ -30,7 +30,20 @@ const config: Config = {
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: [
+    '@docusaurus/theme-mermaid',
+    // Offline/local full-text search — builds the index at build time and ships
+    // it with the static site (no Algolia/third-party service). The search box
+    // appears in the navbar automatically.
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true, // hash the index filename for long-term caching
+        indexBlog: false, // blog is disabled in the preset
+        docsRouteBasePath: '/docs', // docs served at /docs (preset default)
+      },
+    ],
+  ],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
