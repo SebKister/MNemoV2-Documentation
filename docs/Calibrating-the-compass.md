@@ -26,7 +26,7 @@ The display will show a red progress bar indicating the advance or the calibrati
 
 ![screencap1702386404.png](/img/screencap1702386404.png)
 
-Once the calibration gets close to completion it will turn green and you’ll have more information displayed on the screen.
+Once the calibration is complete the progress bar will turn yellow and you’ll have more information displayed on the screen.
 
 
 ## 3-Plane Calibration
