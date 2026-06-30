@@ -105,12 +105,16 @@ graph LR
     subgraph SystemMenu [System]
         direction TB
         Update(Update Firmware)
+        OTAUpdate(OTA Update)
         ResetSet(Reset Settings)
         ResetMem(Reset Memory)
+        WhatsNew("What's New")
 
         System --> Update
+        System --> OTAUpdate
         System --> ResetSet
         System --> ResetMem
+        System --> WhatsNew
     end
 
     %% Tools Submenu
