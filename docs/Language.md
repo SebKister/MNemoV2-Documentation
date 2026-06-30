@@ -10,8 +10,8 @@ You will see the list of available languages:
 - **ESPANOL**
 - **FRANCAIS**
 - **DEUTSCH**
-- **ZH (SIMP)** — Simplified Chinese (Mainland)
-- **ZH (TRAD)** — Traditional Chinese (Taiwan)
+- **简体中文** — Simplified Chinese (Mainland)
+- **繁體中文** — Traditional Chinese (Taiwan)
 
 The currently active language is marked with a `<-` arrow. Select a different entry to switch immediately — all on-device menus, prompts and feedback messages update at once.
 

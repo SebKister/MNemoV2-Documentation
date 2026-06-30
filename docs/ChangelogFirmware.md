@@ -1,5 +1,15 @@
 # Change Log Firmware
 
+## v3.3.1 ##
+
+*First public release since v3.1 — it bundles all of the over-the-air work and the multilingual update.*
+
+- **Over-the-air (OTA) updates**: the MNemo can now update its firmware over WiFi — both the main firmware and the WiFi radio — with no cable, and it works on battery. Start it from OPTIONS > SETTINGS > SYSTEM > OTA UPDATE, or accept the *update available* prompt shown when WiFi turns on. A one-time USB update is needed first to switch a device over — see [Firmware Update](Firmware-Upgrade.md).
+- **Chinese over the air**: Simplified (简体中文) and Traditional (繁體中文) Chinese are included in the over-the-air image — restored after the first slim OTA builds had to leave them out for size. The Chinese menu wording was also reviewed and refined by a native speaker.
+- **"What's New" screen**: after every update the device shows the release's headline features once, on the first boot; read them again any time from OPTIONS > SETTINGS > SYSTEM > WHAT'S NEW.
+- **WiFi radio compatibility**: the WiFi (NINA) radio firmware and its on-device driver were brought in line for the over-the-air radio update.
+- **Robustness**: assorted fixes to the over-the-air update process.
+
 ## v3.1.0 ##
 
 - **WiFi QR onboarding**: when WiFi is turned on the OLED shows a QR code so a phone can join the network and open the web page without typing the SSID, password or IP address. Works in both Access Point (two QR codes: join then open-page) and local-network (single open-page QR) modes. The QR dismisses itself once the web page actually loads, or with **NEXT** / **SELECT**.
