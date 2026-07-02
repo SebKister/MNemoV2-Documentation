@@ -50,6 +50,7 @@ const sidebars: SidebarsConfig = {
     'Battery',
     'Extras',
     'MNEMOLINK',
+    'Serial-CLI',
     'WIFI-Data-transfer',
     'Firmware-Upgrade',
     'Maintenance',
