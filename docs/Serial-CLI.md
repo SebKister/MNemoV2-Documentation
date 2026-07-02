@@ -14,8 +14,9 @@ users and troubleshooting.
 2. Open any serial terminal program and connect to the Mnemo's serial port at **57600 baud**.
 3. Type a command name, optionally followed by arguments, and press **Enter**.
 
-Each command sends its output back over the serial link and finishes with an
-end-of-transmission marker, so host software knows when a response is complete.
+Commands that produce a serial response finish it with an end-of-transmission marker,
+so host software knows when the response is complete. A few commands that only change a
+setting or update the display return without emitting a marker.
 
 :::tip
 Not sure what's available? Type `help` to list every command with its description, or
@@ -123,9 +124,9 @@ See [Firmware Upgrade](Firmware-Upgrade.md) for the recommended update procedure
 |---------|-----------|-------------|
 | `picbootmode` | — | Prepares the device for PIC reprogramming. |
 | `getpicinfo` | — | Gets PIC hardware/firmware information. |
-| `picprog` | — | Uploads the in-memory firmware onto the PIC. |
+| `picprog` | `[INIT]` | Uploads the in-memory firmware onto the PIC. Pass `INIT` for the initialization variant. |
 | `getpicswitchonthreshold` | — | Gets the PIC switch-on threshold. |
-| `setpicswitchonthreshold` | — | Sets the PIC switch-on threshold. |
+| `setpicswitchonthreshold` | `value` | Sets the PIC switch-on threshold to the given numeric value. |
 | `eepromwrite` | `address byte` | Writes a byte to a specific EEPROM address. |
 | `eepromread` | `address` | Reads a byte from a specific EEPROM address. |
 | `readfile` | `filename` | Reads a file stored on Flash memory. |
