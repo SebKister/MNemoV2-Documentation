@@ -14,11 +14,20 @@ export default function Downloads(): React.ReactElement {
     b.version.localeCompare(a.version, undefined, { numeric: true })
   );
 
+  const latestHref = useBaseUrl('pdf/MNemo-UserManual-latest.pdf');
+
   return (
     <Layout title="Downloads" description="MNemo user manual PDF downloads">
       <main className="container margin-vert--xl">
         <h1>User Manual Downloads</h1>
-        <p>PDF versions of the MNemo user manual, one per firmware release.</p>
+        <p>
+          <a href={latestHref} download>
+            <strong>Download the latest manual (PDF)</strong>
+          </a>{' '}
+          — regenerated automatically from the online manual on every update.
+        </p>
+        <h2>Archived versions</h2>
+        <p>One frozen PDF per firmware release, for users staying on earlier firmware.</p>
         {sorted.length === 0 ? (
           <p><em>No PDFs available yet.</em></p>
         ) : (

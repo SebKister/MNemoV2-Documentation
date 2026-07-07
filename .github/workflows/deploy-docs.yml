@@ -31,6 +31,16 @@ jobs:
       - name: Build Docusaurus site
         run: npm run build
 
+      # Regenerate the always-current manual PDF from the freshly built site.
+      # Frozen per-firmware PDFs live in static/pdf/ and are cut via the
+      # "Cut manual version" workflow.
+      - name: Generate latest-manual PDF
+        run: |
+          npx docusaurus serve --port 3123 --no-open &
+          for i in $(seq 1 30); do curl -sf http://localhost:3123/mnemo/ >/dev/null && break; sleep 1; done
+          npx --yes docs-to-pdf             --initialDocURLs="http://localhost:3123/mnemo/docs/Starter"             --contentSelector="article"             --paginationSelector="a.pagination-nav__link--next"             --excludeSelectors=".theme-doc-breadcrumbs,.theme-edit-this-page,.pagination-nav,.theme-doc-toc-mobile"             --coverTitle="MNemo V2 — User Manual"             --coverSub="Generated $(date -u +%F) — tracks the online manual"             --outputPDFFilename="build/pdf/MNemo-UserManual-latest.pdf"
+          kill %1 2>/dev/null || true
+
       # Ships to the VPS through a write-only rrsync jail scoped to the docs
       # directory (key restricted via command= in authorized_keys).
       - name: Deploy to VPS

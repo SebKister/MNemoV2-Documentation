@@ -1,0 +1,43 @@
+# One click from the Actions tab: freezes the current "latest" manual PDF
+# as a permanent versioned download and lists it on the downloads page.
+name: Cut manual version (freeze latest PDF)
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Firmware/manual version, e.g. 3.3.0 (no leading v)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Freeze current latest PDF as versioned download
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          curl -fsSL "https://manuals.arianesline.com/mnemo/pdf/MNemo-UserManual-latest.pdf" \
+            -o "static/pdf/MNemo-UserManual-v${VERSION}.pdf"
+          python3 - <<'PY'
+          import json, os, datetime
+          v = os.environ["VERSION"].lstrip("v")
+          p = "src/data/pdfVersions.json"
+          d = json.load(open(p))
+          if any(e["version"] == v for e in d):
+              raise SystemExit(f"version {v} already exists")
+          d.append({"version": v,
+                    "filename": f"MNemo-UserManual-v{v}.pdf",
+                    "date": datetime.date.today().isoformat()})
+          open(p, "w").write(json.dumps(d, indent=4) + "\n")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/pdf "src/data/pdfVersions.json"
+          git commit -m "Freeze manual v${VERSION} from latest PDF"
+          git push
