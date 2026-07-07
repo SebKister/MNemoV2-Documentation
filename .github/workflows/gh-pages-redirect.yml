@@ -1,0 +1,46 @@
+# One-shot: publishes a redirect stub to the legacy GitHub Pages site.
+# The real documentation now deploys to manuals.arianesline.com/mnemo/
+# (see deploy-docs.yml). Run manually from the Actions tab if the stub
+# ever needs republishing.
+name: GitHub Pages redirect stub
+
+on: workflow_dispatch
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  publish-redirect:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - name: Generate redirect site
+        run: |
+          mkdir -p site
+          cat > site/index.html <<'HTML'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+          <meta charset="utf-8">
+          <title>Moved — MNemo V2 documentation</title>
+          <link rel="canonical" href="https://manuals.arianesline.com/mnemo/">
+          <meta name="robots" content="noindex">
+          <script>
+            var p = location.pathname.replace(/^\/MNemoV2-Documentation\/?/, "");
+            location.replace("https://manuals.arianesline.com/mnemo/" + p + location.search + location.hash);
+          </script>
+          <meta http-equiv="refresh" content="0; url=https://manuals.arianesline.com/mnemo/">
+          </head>
+          <body>The MNemo V2 documentation has moved to
+          <a href="https://manuals.arianesline.com/mnemo/">manuals.arianesline.com/mnemo</a>.</body>
+          </html>
+          HTML
+          cp site/index.html site/404.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - uses: actions/deploy-pages@v4
