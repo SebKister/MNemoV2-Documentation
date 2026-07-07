@@ -1,4 +1,4 @@
-name: Deploy Docusaurus to GitHub Pages
+name: Deploy Docusaurus to manuals.arianesline.com
 
 on:
   push:
@@ -9,15 +9,13 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: deploy-docs
+  cancel-in-progress: true
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,17 +31,14 @@ jobs:
       - name: Build Docusaurus site
         run: npm run build
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # Ships to the VPS through a write-only rrsync jail scoped to the docs
+      # directory (key restricted via command= in authorized_keys).
+      - name: Deploy to VPS
+        env:
+          DEPLOY_KEY: ${{ secrets.DOCS_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -t ed25519 51.161.35.92 >> ~/.ssh/known_hosts 2>/dev/null
+          rsync -az --delete -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes" build/ aline@51.161.35.92:/
