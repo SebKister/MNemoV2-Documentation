@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '@theme/Layout';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import versions from '../data/pdfVersions.json';
 
 type PdfVersion = {
@@ -35,7 +36,7 @@ export default function Downloads(): React.ReactElement {
                   <td>{entry.version}</td>
                   <td>{entry.date}</td>
                   <td>
-                    <a href={`/MNemoV2-Documentation/pdf/${entry.filename}`} download>
+                    <a href={useBaseUrl(`pdf/${entry.filename}`)} download>
                       {entry.filename}
                     </a>
                   </td>
