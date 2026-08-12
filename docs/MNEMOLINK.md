@@ -39,6 +39,17 @@ MNemoLink will save the data on the device in an Excel sheet. You can then copy-
 
 The **CLI** tab is for advanced command line based interaction with the MNemo.
 
+## Converting a DMP to Excel ##
+
+If you already have a DMP file — saved from MNemoLink, or downloaded straight from
+the device over WiFi — you can turn it into a spreadsheet without installing anything:
+
+**[converter.arianesline.com](https://converter.arianesline.com)**
+
+Drop the `.dmp` on the page and you get back an Excel workbook with a summary of the
+survey, one sheet containing every shot, and one sheet per section. CSV and JSON are
+available too. The file is converted on the spot and is never stored.
+
 
 
 

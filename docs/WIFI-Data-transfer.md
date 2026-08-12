@@ -42,6 +42,10 @@ The Mnemo will try to connect to its known networks. If successful it returns to
 
 Open a browser and navigate to the displayed IP address to preview surveys or download your data.
 
+> The DMP you download here can be converted to Excel at
+> [converter.arianesline.com](https://converter.arianesline.com) — no software to install.
+> See [MnemoLink - Data Transfer](./MNEMOLINK.md).
+
   ![browser_main.png](/img/browser_main.png)
 
   ![browser_map.png](/img/browser_map.png)

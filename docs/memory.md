@@ -9,5 +9,8 @@ You can erase the memory by going to:
 > We recommend downloading the data from the MNemo after each survey session, backing up the data as DMP and erasing the data from the device in order to start next session with an empty memory.
 > 
 
+A DMP you have backed up can be turned into a spreadsheet at any time — drop it on
+[converter.arianesline.com](https://converter.arianesline.com). See [MnemoLink - Data Transfer](./MNEMOLINK.md).
+
 
 
