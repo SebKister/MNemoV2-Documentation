@@ -52,6 +52,7 @@ const sidebars: SidebarsConfig = {
     'MNEMOLINK',
     'Serial-CLI',
     'WIFI-Data-transfer',
+    'DMP-Format',
     'Firmware-Upgrade',
     'Maintenance',
     'tipsandtricks',
