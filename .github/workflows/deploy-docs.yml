@@ -18,9 +18,9 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: '20'
           cache: npm
@@ -48,7 +48,16 @@ jobs:
           DEPLOY_KEY: ${{ secrets.DOCS_DEPLOY_KEY }}
         run: |
           mkdir -p ~/.ssh
-          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          # Strip CR: a key pasted into the secret from a Windows editor arrives
+          # CRLF-terminated, which OpenSSH rejects with "error in libcrypto".
+          printf '%s\n' "$DEPLOY_KEY" | tr -d '\r' > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
+          # Fail with something actionable rather than an opaque libcrypto error.
+          # -y derives the public key, so this validates the private key without
+          # printing any of it.
+          if ! ssh-keygen -y -f ~/.ssh/deploy_key >/dev/null 2>&1; then
+            echo "::error::DOCS_DEPLOY_KEY is not a valid OpenSSH private key. Set it from the key file so its newlines survive, e.g. 'gh secret set DOCS_DEPLOY_KEY --repo <repo> < deploy_key'. A PuTTY .ppk must be converted first."
+            exit 1
+          fi
           ssh-keyscan -t ed25519 51.161.35.92 >> ~/.ssh/known_hosts 2>/dev/null
           rsync -az --delete -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes" build/ aline@51.161.35.92:/mnemo
