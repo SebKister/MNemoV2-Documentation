@@ -6,6 +6,17 @@ WiFi settings are now grouped in their own submenu at **OPTIONS > WIFI**, which 
 - **WIFI ON AT START** – auto-connect on every power-on
 - **Back**
 
+Each row shows the state it will put the device in. *(v3.4.0+)* While you are
+connected to a local network the AP row reads **WIFI_AP (SWITCH)** rather than
+`(OFF)` — selecting it there does not add an access point alongside the network,
+it drops the network connection and switches the device over to its own AP.
+
+> **WIFI OFF really powers the radio down** *(v3.4.0+)*. Until v3.3.1 switching
+> WiFi off left the radio powered and still associated, quietly holding the device
+> at about **80 mA instead of its 28 mA idle**. Turning WiFi off now takes the
+> radio out of the power budget; the next WiFi command brings it back up on its
+> own. See [Battery](Battery.md).
+
 ---
 
 ## Local Network
@@ -60,6 +71,19 @@ When enabled, the device automatically starts its **WiFi Access Point** every ti
 
 > Combined with the QR onboarding below, this makes opening the Mnemo's web page on your phone right after switching the device on a two-scan operation.
 
+### Not underwater *(v3.4.0+)*
+
+WiFi does not travel through water, so an access point started underwater can only
+drain the battery. From v3.4.0 the device therefore:
+
+- **skips** the automatic access point when it is switched on while submerged, and
+- **shuts it down** within about 5 seconds if the device goes underwater while the
+  automatic access point is up.
+
+> This applies **only** to the access point started automatically by *WiFi At
+> Start*. WiFi that you switched on yourself from the menu is never turned off for
+> you — dive or no dive.
+
 ---
 
 ## WiFi QR onboarding *(v3.1.0+)*
@@ -100,3 +124,11 @@ You can use MNemoLink to scan your network and find your MNemo.
 Once found, you can download the data through WiFi.
 
 ![Screenshot 2024-01-25 075618.png](/img/Screenshot_2024-01-25_075618.png)
+
+---
+
+## Erasing the memory from the web page *(v3.4.0+)*
+
+All recorded surveys can be erased from the web interface, after a confirmation
+page that shows what is stored and offers a download first. See
+[Memory management](memory.md).

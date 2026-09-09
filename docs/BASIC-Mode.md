@@ -49,6 +49,10 @@ This will save the data and put the device back in STANDBY mode ( Blinking GREEN
 
 To exit BASIC survey mode, from the STANDBY mode, hold the cursor to the right during 3s.
 
+> **On a long dive, see [ECO Mode](ECO-Mode.md)** _(v3.4.0+)_ — the same survey,
+> the same clicks, drawn as a single small coloured dot on a black screen for about
+> half the battery draw.
+
 ## BASIC Mode Overview ##
 
 ![image_4.png](/img/image_4.png)

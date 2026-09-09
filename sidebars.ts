@@ -27,6 +27,7 @@ const sidebars: SidebarsConfig = {
         'Survey-Flow',
         'BASIC-Mode',
         'BASIC-Mode-Clicks',
+        'ECO-Mode',
         'Verbose-Mode',
         'Recording-Surface-pressure',
         'LRUD',
