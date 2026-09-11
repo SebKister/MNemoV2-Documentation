@@ -33,9 +33,14 @@ screen**. The colours are exactly the ones you already know from BASIC:
 (These are the default colours. If you changed them in MnemoLink, ECO uses your
 colours too.)
 
-The panel is also dimmed and refreshed **twice a second instead of five times a
-second**. Together these bring the device down to **about 26 mA while surveying,
-against 55–57 mA in BASIC** — roughly half the power for the same survey.
+The screen is also refreshed **twice a second instead of five times a second**.
+Together these bring the device down to **about 27 mA while surveying, against
+55–57 mA in BASIC** — better than half the power for the same survey.
+
+> **Your contrast setting is left alone in ECO.** An early version of the mode
+> dimmed the panel as well, but ECO lights so few pixels that dimming them further
+> saved very little — and it cost readability underwater, which is exactly where
+> the mode is meant to be used.
 
 > The click-code reminder is still shown in ECO. Dropping it would have saved
 > about 1.5 mA, which is not worth losing the reference underwater.

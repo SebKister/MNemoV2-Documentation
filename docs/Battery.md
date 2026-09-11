@@ -26,9 +26,9 @@ anything:
 - **WIFI OFF really turns the radio off.** Switching WiFi off used to leave the
   radio powered and still associated, holding the device at roughly **80 mA
   instead of its 28 mA idle**. The radio is now genuinely powered down.
-- **[ECO survey mode](ECO-Mode.md)** halves the current drawn while you survey —
-  about **26 mA against BASIC's 55–57 mA** — by replacing the full-screen colour
-  with a single small coloured dot on a black screen.
+- **[ECO survey mode](ECO-Mode.md)** more than halves the current drawn while you
+  survey — about **27 mA against BASIC's 55–57 mA** — by replacing the full-screen
+  colour with a single small coloured dot on a black screen.
 
 ## Low battery
 

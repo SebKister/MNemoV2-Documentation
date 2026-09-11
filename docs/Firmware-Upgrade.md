@@ -6,6 +6,7 @@ The MNemo can update its firmware **over WiFi (over-the-air)** or **over USB**. 
 From **v3.2.0**, the MNemo can download and install new firmware by itself, over WiFi — no cable. It updates both the **main firmware** and the **WiFi radio**, and it works **on battery**.
 
 - Turn WiFi on. If a newer version is available, an **update available** prompt appears — accept it. You can also start an update at any time from **OPTIONS > SETTINGS > SYSTEM > OTA UPDATE**.
+  > *(v3.4.0+)* The check runs on the **first WiFi connection after each power-on**, so switching WiFi off and on again in the same session does not re-check. If you dismissed the prompt and want it back, either power-cycle the device or use **OTA UPDATE** from the menu.
 - The MNemo connects to a saved WiFi network, downloads the update, and asks you to **confirm**.
 - When prompted, **hold SELECT** to restart and apply. On battery, keeping SELECT held keeps the device powered across the restart.
 - After it restarts, the **What's New** screen shows what changed.
