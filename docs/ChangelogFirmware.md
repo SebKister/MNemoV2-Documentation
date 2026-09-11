@@ -1,5 +1,27 @@
 # Change Log Firmware
 
+## v3.4.0 ##
+
+*A battery and data-safety release: a new low-power survey mode, less power drawn everywhere else, and nothing lost when the power goes.*
+
+- **ECO survey mode**: a third survey mode next to BASIC and Verbose, selected from OPTIONS > SETTINGS > SURVEY. It runs exactly like BASIC — same clicks, same wheel, same readings — but shows the survey phase as a single small coloured dot on a black screen instead of filling the display with colour, refreshed half as often. About **27 mA while surveying against BASIC's 55–57 mA**. Your contrast setting is left alone in ECO. ECO sections are named `E##` instead of `B##` so you can tell them apart later. See [ECO Mode](ECO-Mode.md).
+- **ECO runs the pack flat on purpose**: the low-battery cutoff that stops BASIC and Verbose leaves usable capacity unspent. In ECO the low-battery icon appears in the top-right corner as a *warning* and the survey carries on until the battery is genuinely empty.
+- **Recovery after a power cut mid-survey**: if the device loses power in the middle of a section, the next power-on closes that section, reports **Survey recovered**, and the shots already taken are kept. Previously such a section was discarded entirely as soon as a new survey was started after it.
+- **The processor rests between jobs**: the main loop now halts the CPU on any pass with nothing to do instead of spinning at full clock for the whole dive. Nothing changes on screen; the battery simply lasts longer.
+- **WIFI OFF really powers the radio down**: switching WiFi off used to leave the radio associated and powered, holding the device at about **80 mA instead of its 28 mA idle**. The radio is now taken out of the power budget.
+- **WiFi At Start is a surface feature**: the access point started by *WiFi At Start* is held off when the device is switched on underwater, and shut down within about 5 s if the device goes under while it is up. WiFi you switched on yourself from the menu is **never** turned off automatically.
+- **Erase memory from the web interface**: a confirmation page that first shows how many surveys and how much memory are stored and offers a DMP or CSV download, then erases only after you type `ERASE` and submit. See [Memory management](memory.md).
+- **Storage problems are reported instead of guessed**: a shot the memory refused is no longer counted (you get a warning and can re-shoot the leg), **MEMORY FULL** and **MEMORY ERROR** appear where a write cannot proceed, a download that could not be completed fails instead of arriving as a short but valid-looking file, and a compass calibration that could not be read at boot is no longer silently replaced by a blank one.
+- **Shot counts agree everywhere**: the last leg of a section is counted on the map as well as in the history row and the web list, a corrupt record now costs one section instead of every section after it, and the history menu can no longer open a survey that is not listed.
+- **Clock sync reports what happened**: synchronising the clock from the browser now confirms success — or says plainly that it failed. Before, a refused sync looked exactly like a successful one. See [Date and Time Synchronization](Date-Synchronization.md).
+- **The WIFI_AP menu row is never blank**: while connected to a local network the row now reads **WIFI_AP (SWITCH)**, since selecting it there swaps the device over to its own access point rather than adding one alongside.
+- **The update check runs once per power-on**, not on every WiFi connection. Switching WiFi off and on again no longer re-shows the *checking for updates* banner and the *update available* prompt each time. See [Firmware Update](Firmware-Upgrade.md).
+- **The Access Point QR code dismisses itself on later sessions too.** It used to close correctly only on the first connection after power-on; on a reconnect the page was served from the phone's cache, so the device never saw it load and the QR stayed on screen.
+- **Memory usage never reads 0% when data is stored.** The figure on the main menu status line — and on the new web erase page — used to round down, so roughly the first 19 shots recorded still showed `0%`.
+- **A settings reset no longer changes which hardware the firmware talks to.** *Reset Settings* used to overwrite the stored choice of real-time clock, pressure sensor and compass, which on some devices left the clock or the depth reading not working, with no way to fix it from the device. Those three selections are now left alone, and a pressure-sensor selection naming a sensor that is not fitted is corrected automatically at the next power-on.
+
+> Coming from **v3.3.1**, this update arrives over WiFi as usual. Coming from **v3.1.1 or older**, the one-time USB update described in [Firmware Update](Firmware-Upgrade.md) is still needed before over-the-air updates work at all.
+
 ## v3.3.1 ##
 
 *First public release since v3.1 — it bundles all of the over-the-air work and the multilingual update.*

@@ -14,6 +14,12 @@ The easiest way to set the clock is from the device's built-in web page over WiF
 
 The device clock is set to the **current date and time of the browser** (i.e. your phone or computer). Two taps and you're done.
 
+*(v3.4.0+)* The page now **tells you the result**: it confirms that the device
+clock was synchronized, or says plainly that the write failed or that the request
+was rejected. Before v3.4.0 a sync that did not take looked exactly like one that
+succeeded — if it reports a failure, try again, and check the clock on the Main
+Menu status line before diving.
+
 > **Tip:** Make it a habit to open the Mnemo page and tap the sync button at the start of every dive trip.
 
 ### Over the USB serial console (advanced)

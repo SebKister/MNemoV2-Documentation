@@ -7,6 +7,12 @@ You can access the history of your surveys on the device in the Menu at:
 It will display a list of all the surveys on your device.
 By selecting one of those surveys you'll get access to a map of that survey as well as some basic statistics.
 
+> **Survey names.** Surveys shot in BASIC mode are named `B01`, `B02`… and, *since
+> v3.4.0*, surveys shot in [ECO mode](ECO-Mode.md) are named `E01`, `E02`… so you
+> can tell afterwards which ones were shot in ECO — and therefore which ones may
+> have ended on a flat battery. Both modes share a single counter, so the numbers
+> never repeat. A survey named by hand in Verbose mode keeps the name you gave it.
+
 ![screencap1702463019.png](/img/screencap1702463019.png)
 
 At any time, you can access the latest survey — or the survey currently being done — by double tapping the back of your Mnemo.
@@ -65,3 +71,12 @@ On the 2D map page a **▶ View in 3D** button opens `/View3D`, a full-screen in
 | Re-centre on a station | Click the station | Tap the station |
 
 A base-plane grid is drawn at the deepest survey point, and a small compass-rose axes widget (East / North / Up) sits in the lower-left corner. Use the **← 2D** link at the top-left to return to the 2D map.
+
+---
+
+## Recovered surveys *(v3.4.0+)*
+
+If the device lost power in the middle of a section, the section is closed at the
+next power-on — the device shows **Survey recovered** — and it then appears in this
+list like any other finished survey, with the shots that were already recorded.
+See [Memory management](memory.md).
