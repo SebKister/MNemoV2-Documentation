@@ -67,7 +67,6 @@ graph LR
         Calibration --> CalWheel
 
         CalCompass --> CalCompFast(Calibrate)
-        CalCompass --> CalComp3Plane(3-Plane)
         CalCompass --> StabFactorComp(Stabilization Factor)
 
         CalPressure --> CalSurface(Surface Pressure)

@@ -1,5 +1,15 @@
 # Change Log Firmware
 
+## Unreleased ##
+
+*Compass calibration: the device now checks that it has seen enough of the world to calibrate.*
+
+- **Coverage instead of a reading count**: the compass calibration screen shows a **COVERAGE** figure and bar, both green once the readings pin the compass model down, which is the moment a save becomes possible. Turning the MNemo flat on the spot filled the old progress bar just as well as a proper tumble, yet gave a calibration that could be wrong by tens of degrees while reporting a perfect fit error; that is exactly what the coverage figure detects. See [Calibrating the compass](Calibrating-the-compass.md).
+- **SAVE is refused on low coverage**: pressing SAVE CAL. too early shows **LOW COVERAGE** and keeps the calibration running. Keep nodding and rolling the device until the bar is green.
+- **CANCEL keeps your previous calibration**: cancelling a calibration used to leave the compass uncalibrated until the next power-on.
+- **New on-screen instructions**: turn around while nodding and rolling the device by about 45°. Turning it upside down is not needed.
+- **The 3-PLANE calibration is removed.** Three rings within 30° of pitch pin the model down poorly, and the free calibration with its coverage check is both quicker and more accurate at any latitude.
+
 ## v3.4.0 ##
 
 *A battery and data-safety release: a new low-power survey mode, less power drawn everywhere else, and nothing lost when the power goes.*
