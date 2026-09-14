@@ -1,18 +1,8 @@
 # Change Log Firmware
 
-## Unreleased ##
-
-*Compass calibration: the device now checks that it has seen enough of the world to calibrate.*
-
-- **Coverage instead of a reading count**: the compass calibration screen shows a **COVERAGE** figure and bar, both green once the readings pin the compass model down, which is the moment a save becomes possible. Turning the MNemo flat on the spot filled the old progress bar just as well as a proper tumble, yet gave a calibration that could be wrong by tens of degrees while reporting a perfect fit error; that is exactly what the coverage figure detects. See [Calibrating the compass](Calibrating-the-compass.md).
-- **SAVE is refused on low coverage**: pressing SAVE CAL. too early shows **LOW COVERAGE** and keeps the calibration running. Keep nodding and rolling the device until the bar is green.
-- **CANCEL keeps your previous calibration**: cancelling a calibration used to leave the compass uncalibrated until the next power-on.
-- **New on-screen instructions**: turn around while nodding and rolling the device by about 45°. Turning it upside down is not needed.
-- **The 3-PLANE calibration is removed.** Three rings within 30° of pitch pin the model down poorly, and the free calibration with its coverage check is both quicker and more accurate at any latitude.
-
 ## v3.4.0 ##
 
-*A battery and data-safety release: a new low-power survey mode, less power drawn everywhere else, and nothing lost when the power goes.*
+*A battery and data-safety release: a new low-power survey mode, less power drawn everywhere else, nothing lost when the power goes, and a compass calibration that checks it has seen enough of the world before it lets you save.*
 
 - **ECO survey mode**: a third survey mode next to BASIC and Verbose, selected from OPTIONS > SETTINGS > SURVEY. It runs exactly like BASIC — same clicks, same wheel, same readings — but shows the survey phase as a single small coloured dot on a black screen instead of filling the display with colour, refreshed half as often. About **27 mA while surveying against BASIC's 55–57 mA**. Your contrast setting is left alone in ECO. ECO sections are named `E##` instead of `B##` so you can tell them apart later. See [ECO Mode](ECO-Mode.md).
 - **ECO runs the pack flat on purpose**: the low-battery cutoff that stops BASIC and Verbose leaves usable capacity unspent. In ECO the low-battery icon appears in the top-right corner as a *warning* and the survey carries on until the battery is genuinely empty.
@@ -29,6 +19,11 @@
 - **The Access Point QR code dismisses itself on later sessions too.** It used to close correctly only on the first connection after power-on; on a reconnect the page was served from the phone's cache, so the device never saw it load and the QR stayed on screen.
 - **Memory usage never reads 0% when data is stored.** The figure on the main menu status line — and on the new web erase page — used to round down, so roughly the first 19 shots recorded still showed `0%`.
 - **A settings reset no longer changes which hardware the firmware talks to.** *Reset Settings* used to overwrite the stored choice of real-time clock, pressure sensor and compass, which on some devices left the clock or the depth reading not working, with no way to fix it from the device. Those three selections are now left alone, and a pressure-sensor selection naming a sensor that is not fitted is corrected automatically at the next power-on.
+- **Compass calibration shows coverage instead of a reading count**: the calibration screen now shows a **COVERAGE** figure and bar, both green once the readings pin the compass model down, which is the moment a save becomes possible. Turning the MNemo flat on the spot filled the old progress bar just as well as a proper tumble, yet gave a calibration that could be wrong by tens of degrees while reporting a perfect fit error; that is exactly what the coverage figure detects. See [Calibrating the compass](Calibrating-the-compass.md).
+- **SAVE is refused on low coverage**: pressing SAVE CAL. too early shows **LOW COVERAGE** and keeps the calibration running. Keep nodding and rolling the device until the bar is green.
+- **CANCEL keeps your previous calibration**: cancelling a calibration used to leave the compass uncalibrated until the next power-on.
+- **New calibration instructions**: turn around while nodding and rolling the device by about 45°. Turning it upside down is not needed.
+- **The 3-PLANE calibration is removed.** Three rings within 30° of pitch pin the model down poorly, and the free calibration with its coverage check is both quicker and more accurate at any latitude.
 
 > Coming from **v3.3.1**, this update arrives over WiFi as usual. Coming from **v3.1.1 or older**, the one-time USB update described in [Firmware Update](Firmware-Upgrade.md) is still needed before over-the-air updates work at all.
 
