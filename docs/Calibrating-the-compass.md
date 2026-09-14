@@ -12,69 +12,42 @@ From the main menu select
 
 **OPTIONS > SETTINGS > SENSORS > COMPASS**
 
-This opens the compass calibration menu with two calibration methods: **CALIBRATE** and **3-PLANE**, as well as the stabilization factor setting.
+This opens the compass menu with **CALIBRATE** and the stabilization factor setting.
 
-## Fast Calibration
+## How the calibration works
 
-Select **CALIBRATE** from the compass menu.
+The compass measures the Earth's magnetic field, but it also sees the small permanent magnetism of the MNemo itself and the way its metal parts bend the field. The calibration measures both so they can be subtracted from every reading you take afterwards.
 
-You must rotate slowly (as in one full rotation per 4s) randomly the Mnemo on all of its 3 axis in order to perform the calibration.
+To do that the device needs to see the Earth's field **from all around**: it collects readings while you move it, and fits them to a model of what a fixed field looks like when the device turns through every orientation. The MNemo checks that the readings it collected really do pin that model down, and shows the result as a **COVERAGE** figure. This check is what makes the difference between a calibration you can trust and one that only looks good:
 
-![screencap1702386279.png](/img/screencap1702386279.png)
+> Turning the MNemo flat on the spot, without tilting it, draws a single circle of readings. That circle fits many different models equally well, so the device would pick one at random. Such a calibration can be wrong by tens of degrees while still reporting an excellent fit error, which is why the MNemo refuses to save it: its coverage stays near 0%.
 
-The display will show a red progress bar indicating the advance or the calibration process.
+## Running the calibration
 
-![screencap1702386404.png](/img/screencap1702386404.png)
+Select **CALIBRATE** from the compass menu. An instruction screen is shown for a few seconds:
 
-Once the calibration is complete the progress bar will turn yellow and you’ll have more information displayed on the screen.
+**TURN AROUND / WHILE NODDING / AND ROLLING / ABOUT 45 DEG**
 
+Then the calibration screen appears, with **SAVE CAL.** and **CANCEL** on the menu line.
 
-## 3-Plane Calibration
+Hold the MNemo in front of you and turn slowly on the spot, a full turn in about five to ten seconds. **While turning, keep nodding the device**, nose up and nose down by about 45°, **and rolling it** from side to side by about 45°, as if the nose of the device were drawing loops. Turning it upside down is not necessary. Keep going until the bar at the bottom of the screen turns **green**, which typically takes 20 to 40 seconds.
 
-The 3-Plane calibration is an **optional** advanced method that collects measurements on three specific tilt planes: **horizontal (0°)**, **30° nose-up**, and **30° nose-down**. It is **not required** — the standard calibration described above is sufficient for most users and conditions.
+The screen shows, from top to bottom:
 
-The 3-Plane calibration can be beneficial when:
-- You are surveying passages with consistent upward or downward slopes (around 30°) and want the best possible accuracy at those tilt angles.
-- You want to ensure that the calibration is specifically optimized for the range of orientations typically encountered during cave surveying.
+- The raw magnetometer readings.
+- Once enough readings are stored, the hard-iron offset (**HI-OFF**), the geomagnetic field strength (**GEOF**) and the fit error (**ERR%**), recomputed twice a second as you move.
+- A count such as **120/192** while the device is still collecting the readings it needs for its first computation, then the **COVERAGE** figure: yellow while it is below 50%, green from 50% up.
+- The bar at the bottom: red while the calibration cannot be saved yet, **green once it can**.
 
-Because it concentrates measurements on the tilt angles you actually use in the field, the 3-Plane calibration minimizes heading inaccuracy in those orientations. However, if your standard calibration already shows a low ERR% and you are satisfied with the survey accuracy, there is no need to perform a 3-Plane calibration.
+<!-- TODO: screenshots of the coverage screen (red bar / green bar), captured with tools/screencap.py on a device running this firmware -->
 
-> **Prerequisite:** A valid Fast Calibration must have been performed and saved before using the 3-Plane method. If no prior calibration exists, the screen will display "CALIBRATE FIRST" and return to the menu.
+Aim for a coverage of 100%. A calibration with the readings well spread over all orientations reaches it within seconds of the bar turning green, and the higher the coverage, the less the calibration depends on the quality of the individual readings.
 
-Select **3-PLANE** from the compass menu.
+## Saving or cancelling
 
-### How it works
-
-The calibration proceeds through 3 planes in sequence. For each plane:
-
-1. An instruction screen appears showing the current plane number (1/3, 2/3, 3/3) and the required tilt angle.
-2. The live calibration screen displays:
-   - **Tilt indicator**: Your current tilt angle and the target. The text turns **green** when you are within ±5° of the target, **yellow** within ±20°, and **red** otherwise. A horizontal bar also shows your tilt position relative to the target.
-   - **Azimuth coverage**: A row of 12 blocks representing 30° sectors of a full 360° rotation. Each block turns **green** when that compass direction has been covered. A white marker shows your current heading.
-   - **Calibration data**: Magnetometer readings, hard-iron offset (HI-OFF), geomagnetic field strength (GEOF), and fit error percentage (ERR%) appear as enough data is collected.
-   - **Progress bar**: At the bottom, three segments show the overall progress across all three planes.
-
-3. **Data is only recorded when your tilt is within ±5° of the target angle.** If you are outside this tolerance, measurements are paused and the azimuth sectors will not fill.
-
-4. Once all 12 azimuth sectors are filled (a full 360° rotation at the correct tilt), the device **automatically advances** to the next plane.
-
-### Plane sequence
-
-| Plane | Target tilt | Instruction |
-|-------|------------|-------------|
-| 1/3   | 0° (horizontal) | HOLD HORIZONTAL |
-| 2/3   | +30° (nose up) | TILT 30 UP |
-| 3/3   | -30° (nose down) | TILT 30 DOWN |
-
-### Completion
-
-After the third plane is complete, the calibration is **automatically saved** and a summary screen is displayed for 5 seconds showing:
-- HI-OFF (hard-iron offset vector)
-- GEOF (geomagnetic field strength)
-- ERR% (fit error percentage)
-- Total number of measurements collected
-
-The device then returns to the main menu.
+- Select **SAVE CAL.** once the bar is green. The calibration is stored and kept across power cycles.
+- If you select **SAVE CAL.** too early, **LOW COVERAGE** is displayed in red for a few seconds and the calibration carries on: keep moving the device and try again when the bar is green.
+- **CANCEL** leaves the calibration screen and keeps the calibration the device had before.
 
 ## Understanding the calibration results
 
@@ -82,11 +55,10 @@ The relevant information is the amount after ERR% which indicates how close the 
 
 GEOF is the approximation of the magnetic field at that location. The compass of the Mnemo is not calibrated to give precise absolute magnetic measurements, nevertheless that gives you an indication of the strength of the magnetic field at your location and should be close to the theorical value ([NCEI Geomagnetic Calculators](https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml?useFullSite=true))
 
+COVERAGE tells you how well the readings you collected pin the model down. 50% is the minimum the device accepts; 100% means the readings were spread over all orientations. Note that a low ERR% on its own is not a sign of a good calibration: it is the coverage that guarantees the readings could not have fitted a wrong model just as well.
+
 > After a firmware update is generally recommended do redo a calibration of the compass but it is important to turn the device completely off before doing the calibration or you’ll get incoherent measurements
 
 
 > **Important:** A precise and correct compass calibration is essential for obtaining accurate survey data.
-> The average calibration time is around 1 minute for the Fast Calibration. The 3-Plane calibration typically takes 2-3 minutes. If the calibration is not finished after 10min, turn MNemo off and on again and restart the calibration.
-
-
-
+> The calibration normally takes well under a minute. If the bar does not turn green after a couple of minutes, you are most likely turning the device without tilting it enough, or standing close to a magnetic disturbance: vary the tilt more, or move away and start again.
