@@ -36,18 +36,23 @@ The screen shows, from top to bottom:
 
 - The raw magnetometer readings.
 - Once enough readings are stored, the hard-iron offset (**HI-OFF**), the geomagnetic field strength (**GEOF**) and the fit error (**ERR%**), recomputed twice a second as you move.
-- A count such as **120/192** while the device is still collecting the readings it needs for its first computation, then the **COVERAGE** figure: yellow while it is below 50%, green from 50% up.
-- The bar at the bottom: red while the calibration cannot be saved yet, **green once it can**.
+- A count such as **120/192** while the device is still collecting the readings it needs for its first computation, then the **COVERAGE** figure.
+- The bar at the bottom. Its colour, and that of the coverage figure, tells you where you stand: **red** while the calibration cannot be saved yet, **yellow** from 50% on, when a save is possible but the calibration is only fair, and **green from 90%**, which is the target.
 
-<!-- TODO: screenshots of the coverage screen (red bar / green bar), captured with tools/screencap.py on a device running this firmware -->
+<!-- TODO: screenshots of the coverage screen (red / yellow / green bar) and of the result screen, captured with tools/screencap.py on a device running this firmware -->
 
-Aim for a coverage of 100%. A calibration with the readings well spread over all orientations reaches it within seconds of the bar turning green, and the higher the coverage, the less the calibration depends on the quality of the individual readings.
+Aim for **90% or more**: that is what a proper nod-and-roll tumble reaches, usually within a minute, and the figure will not climb much beyond it, so there is no need to chase 100%. The higher the coverage, the less the calibration depends on the quality of the individual readings.
 
 ## Saving or cancelling
 
-- Select **SAVE CAL.** once the bar is green. The calibration is stored and kept across power cycles.
-- If you select **SAVE CAL.** too early, **LOW COVERAGE** is displayed in red for a few seconds and the calibration carries on: keep moving the device and try again when the bar is green.
+- Select **SAVE CAL.** once the bar is green, or yellow if you are pressed for time. The calibration is stored and kept across power cycles.
+- If you select **SAVE CAL.** too early, **LOW COVERAGE** is displayed in red for a few seconds and the calibration carries on: keep moving the device and try again when the bar has changed colour.
 - **CANCEL** leaves the calibration screen and keeps the calibration the device had before.
+
+After a save the result stays on screen until you press **SELECT**:
+
+- A grade: **EXCELLENT** (coverage 90% or more), **GOOD** (70% or more) or **FAIR** (below that, or a fit error above 2%). A FAIR calibration works, but it is worth redoing when you can, with more tilt or away from whatever disturbed the field.
+- The coverage, the fit error (**ERR%**), the field strength (**GEOF**) and the hard-iron offset (**HI-OFF**) of the calibration that was stored, in case you want to note them down.
 
 ## Understanding the calibration results
 
@@ -55,7 +60,7 @@ The relevant information is the amount after ERR% which indicates how close the 
 
 GEOF is the approximation of the magnetic field at that location. The compass of the Mnemo is not calibrated to give precise absolute magnetic measurements, nevertheless that gives you an indication of the strength of the magnetic field at your location and should be close to the theorical value ([NCEI Geomagnetic Calculators](https://www.ngdc.noaa.gov/geomag/calculators/magcalc.shtml?useFullSite=true))
 
-COVERAGE tells you how well the readings you collected pin the model down. 50% is the minimum the device accepts; 100% means the readings were spread over all orientations. Note that a low ERR% on its own is not a sign of a good calibration: it is the coverage that guarantees the readings could not have fitted a wrong model just as well.
+COVERAGE tells you how well the readings you collected pin the model down. 50% is the minimum the device accepts; 90% or more is what a proper tumble reaches and what the grade calls EXCELLENT. Note that a low ERR% on its own is not a sign of a good calibration: it is the coverage that guarantees the readings could not have fitted a wrong model just as well.
 
 > After a firmware update is generally recommended do redo a calibration of the compass but it is important to turn the device completely off before doing the calibration or you’ll get incoherent measurements
 
