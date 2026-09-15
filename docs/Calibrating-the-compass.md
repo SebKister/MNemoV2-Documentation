@@ -32,7 +32,7 @@ Select **CALIBRATE** from the compass menu. An instruction screen is shown for a
 
 Then the calibration screen appears, with **SAVE CAL.** and **CANCEL** on the menu line.
 
-Hold the MNemo in front of you and turn slowly on the spot, a full turn in about five to ten seconds. **While turning, keep nodding the device**, nose up and nose down by about 45°, **and rolling it** from side to side by about 45°, as if the nose of the device were drawing loops. Turning it upside down is not necessary. Keep going until the bar at the bottom of the screen turns **green**, which typically takes 20 to 40 seconds.
+Hold the MNemo in front of you and turn slowly on the spot, a full turn in about 15 seconds. **While turning, keep nodding the device**, nose up and nose down by about 45°, **and rolling it** from side to side by about 45°, as if the nose of the device were drawing loops. Turning it upside down is not necessary. Keep going until the bar at the bottom of the screen turns **green**, which typically takes 20 to 40 seconds.
 
 The screen shows, from top to bottom:
 
