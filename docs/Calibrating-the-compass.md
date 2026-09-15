@@ -28,6 +28,8 @@ Select **CALIBRATE** from the compass menu. An instruction screen is shown for a
 
 **TURN AROUND / WHILE NODDING / AND ROLLING / ABOUT 45 DEG**
 
+![The instruction screen](/img/cal_instructions.png)
+
 Then the calibration screen appears, with **SAVE CAL.** and **CANCEL** on the menu line.
 
 Hold the MNemo in front of you and turn slowly on the spot, a full turn in about five to ten seconds. **While turning, keep nodding the device**, nose up and nose down by about 45°, **and rolling it** from side to side by about 45°, as if the nose of the device were drawing loops. Turning it upside down is not necessary. Keep going until the bar at the bottom of the screen turns **green**, which typically takes 20 to 40 seconds.
@@ -39,7 +41,9 @@ The screen shows, from top to bottom:
 - A count such as **120/192** while the device is still collecting the readings it needs for its first computation, then the **COVERAGE** figure.
 - The bar at the bottom. Its colour, and that of the coverage figure, tells you where you stand: **red** while the calibration cannot be saved yet, **yellow** from 50% on, when a save is possible but the calibration is only fair, and **green from 90%**, which is the target.
 
-<!-- TODO: screenshots of the coverage screen (red / yellow / green bar) and of the result screen, captured with tools/screencap.py on a device running this firmware -->
+![Coverage 23%, red: not enough yet](/img/cal_coverage_red.png) ![Coverage 96%, green: ready to save](/img/cal_coverage_green.png)
+
+Once a save is possible, the figure is the **best coverage reached so far**, and that is the calibration SAVE CAL. stores: the seconds you spend reaching for the button, moving less, cannot lose it. Nothing on this screen moves while the device is held still, either. The device only keeps readings that differ from the ones it already has, so the count and the coverage progress with your movement, not with time.
 
 Aim for **90% or more**: that is what a proper nod-and-roll tumble reaches, usually within a minute, and the figure will not climb much beyond it, so there is no need to chase 100%. The higher the coverage, the less the calibration depends on the quality of the individual readings.
 
@@ -50,6 +54,8 @@ Aim for **90% or more**: that is what a proper nod-and-roll tumble reaches, usua
 - **CANCEL** leaves the calibration screen and keeps the calibration the device had before.
 
 After a save the result stays on screen until you press **SELECT**:
+
+![The result screen after SAVE CAL.](/img/cal_result.png)
 
 - A grade: **EXCELLENT** (coverage 90% or more), **GOOD** (70% or more) or **FAIR** (below that, or a fit error above 2%). A FAIR calibration works, but it is worth redoing when you can, with more tilt or away from whatever disturbed the field.
 - The coverage, the fit error (**ERR%**), the field strength (**GEOF**) and the hard-iron offset (**HI-OFF**) of the calibration that was stored, in case you want to note them down.
