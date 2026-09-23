@@ -60,6 +60,8 @@ during normal use.
 | `removewifinet` | `NetworkName Password` | Removes a WiFi network from the device. |
 | `clearwifinet` | — | Clears the entire list of saved networks. |
 | `listwifinet` | — | Reads the list of saved networks. |
+| `checkwifistorage` | — | *(firmware after v3.4.0)* Checks that the device can still save networks. Prints `OK` or `FAILING`. |
+| `repairwifistorage` | `[force]` | *(firmware after v3.4.0)* Runs the same check and, only if it fails, clears the WiFi radio's storage area so that networks can be saved again. **Deletes the saved networks.** `force` clears it even when the check passes. See [Saved networks are not kept](WIFI-Data-transfer.md#saved-networks-are-not-kept). |
 
 ## Click / button tuning
 
