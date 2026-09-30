@@ -1,5 +1,10 @@
 # Change Log Firmware
 
+## v3.4.1 ##
+
+- **The double tap no longer opens the map.** Tapping the back of the Mnemo twice used to bring up the current survey's map. In BASIC and ECO, the **LEFT-RIGHT-LEFT-RIGHT** [click command](BASIC-Mode-Clicks.md) still does, and every survey's map is under **OPTIONS > HISTORY**. The *Double-tap map display* setting is gone from the web page, and so are the `activatedoubletap` and `deactivatedoubletap` [serial commands](Serial-CLI.md). MNemoLink's *Double Tap* setting no longer has any effect.
+- **The click threshold no longer changes on its own.** Since v2.6.9, four presses in a row that the slider did not register lowered the click threshold and saved it, and the device stopped for two seconds on a **NEW BUTTON THR** message, in the middle of a survey too. The threshold now changes only when you set it: in the **Slider button** card of the web page, or with the `setclickthreshold` [serial command](Serial-CLI.md). A threshold lowered this way before the update stays as it is until you set it again.
+
 ## v3.4.0 ##
 
 *A battery and data-safety release: a new low-power survey mode, less power drawn everywhere else, nothing lost when the power goes, and a compass calibration that checks it has seen enough of the world before it lets you save.*

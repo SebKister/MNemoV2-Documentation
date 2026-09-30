@@ -71,8 +71,6 @@ during normal use.
 | `setunclickdelta` | `level` | Sets the unclick threshold percentage. |
 | `getBMclickfactor` | — | Gets the Basic Mode click time factor (in %). |
 | `setBMclickfactor` | `factor` | Sets the Basic Mode click time factor (in %). |
-| `activatedoubletap` | — | Activates the double-tap gesture to display the survey (restart required). |
-| `deactivatedoubletap` | — | Deactivates the double-tap gesture (restart required). |
 | `activatesafeon` | — | Activates the safety-to-turn-on feature. |
 | `deactivatesafeon` | — | Deactivates the safety-to-turn-on feature. |
 
