@@ -47,7 +47,7 @@ during normal use.
 
 | Command | Arguments | Description |
 |---------|-----------|-------------|
-| `setname` | `name` | Sets the custom (friendly) name of the device. |
+| `setname` | `name` | Sets the custom (friendly) name of the device: 1 to 19 letters (A–Z, a–z), digits, spaces, hyphens or underscores. Spaces at either end are dropped. Any other name is refused with an error line, and the current name is kept. |
 | `getname` | — | Gets the custom name of the device. |
 | `getfirmwareversion` | — | Gets the firmware version installed on the Mnemo. |
 | `getwififirmwareversion` | — | Gets the firmware version installed on the WiFi (NINA) module. |
