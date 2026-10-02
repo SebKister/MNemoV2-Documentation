@@ -24,7 +24,7 @@ Give an impulse left to the slider button (SELECT) to go on to the 3D view, then
 
 ![screencap1702463138.png](/img/screencap1702463138.png)
 
-> The double tap on the back of the Mnemo that used to open this view has been removed; see the [firmware changelog](ChangelogFirmware.md).
+> The double tap on the back of the Mnemo that used to open this view has been removed; see the [firmware changelog](ChangelogFirmware.md). In Verbose mode, you can see a section's map in the history once you have ended it.
 
 ---
 
