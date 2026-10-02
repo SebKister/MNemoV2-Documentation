@@ -66,9 +66,9 @@ during normal use.
 | Command | Arguments | Description |
 |---------|-----------|-------------|
 | `getclickthreshold` | — | Gets the click threshold percentage. |
-| `setclickthreshold` | `level` | Sets the click threshold percentage. |
+| `setclickthreshold` | `level` | Sets the click threshold percentage, 10–90; any other value is ignored. |
 | `getunclickdelta` | — | Gets the unclick threshold percentage. |
-| `setunclickdelta` | `level` | Sets the unclick threshold percentage. |
+| `setunclickdelta` | `level` | Sets the unclick threshold percentage, 2–40; any other value is ignored. |
 | `getBMclickfactor` | — | Gets the Basic Mode click time factor (in %). |
 | `setBMclickfactor` | `factor` | Sets the Basic Mode click time factor (in %). |
 | `activatesafeon` | — | Activates the safety-to-turn-on feature. |
