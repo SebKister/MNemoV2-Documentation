@@ -47,7 +47,7 @@ during normal use.
 
 | Command | Arguments | Description |
 |---------|-----------|-------------|
-| `setname` | `name` | Sets the custom (friendly) name of the device. |
+| `setname` | `name` | Sets the custom (friendly) name of the device: 1 to 19 letters (A–Z, a–z), digits, spaces, hyphens or underscores. Spaces at either end are dropped. Any other name is refused with an error line, and the current name is kept. |
 | `getname` | — | Gets the custom name of the device. |
 | `getfirmwareversion` | — | Gets the firmware version installed on the Mnemo. |
 | `getwififirmwareversion` | — | Gets the firmware version installed on the WiFi (NINA) module. |
@@ -56,7 +56,7 @@ during normal use.
 
 | Command | Arguments | Description |
 |---------|-----------|-------------|
-| `addwifinet` | `NetworkName Password` | Adds a WiFi network to the device. |
+| `addwifinet` | `NetworkName Password` | Adds a WiFi network to the device, or replaces the password of one already saved under that name: a name of 1 to 32 bytes, and a password of 8 to 63 characters (an accented letter counts as 2), or none for an open network. Up to 20 networks are kept. A network that does not fit is refused with an error line saying why, and nothing is saved. An error line also reports a network the WiFi module's storage did not keep. |
 | `removewifinet` | `NetworkName Password` | Removes a WiFi network from the device. |
 | `clearwifinet` | — | Clears the entire list of saved networks. |
 | `listwifinet` | — | Reads the list of saved networks. |
@@ -66,13 +66,11 @@ during normal use.
 | Command | Arguments | Description |
 |---------|-----------|-------------|
 | `getclickthreshold` | — | Gets the click threshold percentage. |
-| `setclickthreshold` | `level` | Sets the click threshold percentage. |
+| `setclickthreshold` | `level` | Sets the click threshold percentage, 10–90; any other value is ignored. |
 | `getunclickdelta` | — | Gets the unclick threshold percentage. |
-| `setunclickdelta` | `level` | Sets the unclick threshold percentage. |
+| `setunclickdelta` | `level` | Sets the unclick threshold percentage, 2–40; any other value is ignored. |
 | `getBMclickfactor` | — | Gets the Basic Mode click time factor (in %). |
 | `setBMclickfactor` | `factor` | Sets the Basic Mode click time factor (in %). |
-| `activatedoubletap` | — | Activates the double-tap gesture to display the survey (restart required). |
-| `deactivatedoubletap` | — | Deactivates the double-tap gesture (restart required). |
 | `activatesafeon` | — | Activates the safety-to-turn-on feature. |
 | `deactivatesafeon` | — | Deactivates the safety-to-turn-on feature. |
 
