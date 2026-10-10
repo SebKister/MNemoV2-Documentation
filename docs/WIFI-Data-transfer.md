@@ -138,13 +138,17 @@ page that shows what is stored and offers a download first. See
 
 ---
 
-## Saved networks are not kept *(firmware after v3.4.0)* {#saved-networks-are-not-kept}
+## Saved networks are not kept *(v3.4.1+)* {#saved-networks-are-not-kept}
 
 The Mnemo keeps its list of WiFi networks in a small storage area on its WiFi
 radio. On some older devices that storage area stops accepting changes: you add
 a network, but it is gone the next time WiFi turns on, and the list always
 comes back empty. Updating the firmware does not fix it, because an update never
 touches that storage area.
+
+The device's web page tells you when this happens: after you add or remove a
+network there, a notice says that the change did not reach the WiFi radio's
+storage and will be lost at the next restart.
 
 To check it and fix it, go to **OPTIONS > SETTINGS > SYSTEM > WIFI STORAGE** and
 select **CHECK & REPAIR**:
@@ -165,8 +169,10 @@ described in [Adding networks](#adding-networks).
 
 If the result is **Radio not supported**, the WiFi radio is running firmware
 older than 1.4. Update it first: see [Firmware Update](Firmware-Upgrade.md).
-**Erase failed** or **Still failing** means the repair did not work. Report it:
-see [Report an Issue](Report-an-Issue.mdx).
+**Radio not answering** means the radio did not respond at all: switch the Mnemo
+off and on, then try again.
+**Erase failed** or **Still failing** means the repair did not work. Report that,
+or a radio that keeps not answering: see [Report an Issue](Report-an-Issue.mdx).
 
 The same check and repair are available over USB from the
 [Serial CLI](Serial-CLI.md): `checkwifistorage` and `repairwifistorage`.
