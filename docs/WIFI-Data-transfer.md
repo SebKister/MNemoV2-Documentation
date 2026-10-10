@@ -39,6 +39,9 @@ Networks can be added in two ways:
 
 > Network names and passwords must not contain spaces and the network must operate on 2.4 GHz.
 
+If networks you add are gone the next time you turn WiFi on, see
+[Saved networks are not kept](#saved-networks-are-not-kept).
+
 ### Connecting
 
 On your Mnemo navigate to **OPTIONS > WIFI > WIFI ON/OFF**:
@@ -132,3 +135,44 @@ Once found, you can download the data through WiFi.
 All recorded surveys can be erased from the web interface, after a confirmation
 page that shows what is stored and offers a download first. See
 [Memory management](memory.md).
+
+---
+
+## Saved networks are not kept *(v3.4.1+)* {#saved-networks-are-not-kept}
+
+The Mnemo keeps its list of WiFi networks in a small storage area on its WiFi
+radio. On some older devices that storage area stops accepting changes: you add
+a network, but it is gone the next time WiFi turns on, and the list always
+comes back empty. Updating the firmware does not fix it, because an update never
+touches that storage area.
+
+The device's web page tells you when this happens: after you add or remove a
+network there, a notice says that the change did not reach the WiFi radio's
+storage and will be lost at the next restart.
+
+To check it and fix it, go to **OPTIONS > SETTINGS > SYSTEM > WIFI STORAGE** and
+select **CHECK & REPAIR**:
+
+- The Mnemo first checks that it can still save, which takes about a second.
+  If it can, the screen shows **Storage OK** and nothing is changed.
+- If it can't, the screen shows **Not saving / Erasing store...**. The Mnemo
+  clears the storage area, the radio sets it up again, and the Mnemo checks
+  once more. This takes about 10 seconds. The result is **Repaired**, followed
+  by **Add networks again**.
+- If WiFi was on, it is turned off before the storage area is cleared.
+
+After a repair the list of networks is empty. Add your networks again as
+described in [Adding networks](#adding-networks).
+
+> The repair clears only the radio's own storage area. Your surveys, your
+> settings and your compass calibration are not affected.
+
+If the result is **Radio not supported**, the WiFi radio is running firmware
+older than 1.4. Update it first: see [Firmware Update](Firmware-Upgrade.md).
+**Radio not answering** means the radio did not respond at all: switch the Mnemo
+off and on, then try again.
+**Erase failed** or **Still failing** means the repair did not work. Report that,
+or a radio that keeps not answering: see [Report an Issue](Report-an-Issue.mdx).
+
+The same check and repair are available over USB from the
+[Serial CLI](Serial-CLI.md): `checkwifistorage` and `repairwifistorage`.

@@ -105,12 +105,14 @@ graph LR
         direction TB
         Update(Update Firmware)
         OTAUpdate(OTA Update)
+        WifiStorage(WiFi Storage)
         ResetSet(Reset Settings)
         ResetMem(Reset Memory)
         WhatsNew("What's New")
 
         System --> Update
         System --> OTAUpdate
+        System --> WifiStorage
         System --> ResetSet
         System --> ResetMem
         System --> WhatsNew
