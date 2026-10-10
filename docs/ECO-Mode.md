@@ -30,8 +30,8 @@ screen**. The colours are exactly the ones you already know from BASIC:
 | **Red** | STABILIZE |
 | Flickering **blue / violet** | READING (the wheel is measuring) |
 
-(These are the default colours. If you changed them in MnemoLink, ECO uses your
-colours too.)
+(These are the default colours. If you changed them with the `setcolor`
+[serial command](Serial-CLI.md), ECO uses your colours too.)
 
 The screen is also refreshed **twice a second instead of five times a second**.
 Together these bring the device down to **about 27 mA while surveying, against

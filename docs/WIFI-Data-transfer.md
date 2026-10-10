@@ -23,19 +23,12 @@ it drops the network connection and switches the device over to its own AP.
 
 ### Adding networks
 
-Networks can be added in two ways:
+Networks are added from the device's web page *(v3.0.0+)*:
+- Connect the Mnemo to WiFi (see below), then navigate to its IP address in a browser. A new
+  device knows no network yet: use its [access point](#the-mnemo-as-wireless-access-point).
+- Use the network management section of the web page to add or remove networks directly.
 
-**Via MNemoLink:**
-- Connect your Mnemo to your computer and open MNemoLink.
-- In the Settings Tab you can manage the known wireless networks.
-- Click *Get Current* to retrieve the list of stored networks. (This list is empty when you buy the device.)
-- Enter the network name and password, then press *Add New*.
-
-  ![mnemolink-wifi.png](/img/mnemolink-wifi.png)
-
-**Via the device's web page** *(v3.0.0+)*:
-- Connect the Mnemo to WiFi (see below), then navigate to its IP address in a browser.
-- Use the network management section of the web page to add or remove networks directly — no MNemoLink required.
+Over USB, the `addwifinet` [serial command](Serial-CLI.md) adds a network too.
 
 > Network names and passwords must not contain spaces and the network must operate on 2.4 GHz.
 
@@ -58,11 +51,21 @@ Open a browser and navigate to the displayed IP address to preview surveys or do
 
 > The DMP you download here can be converted to Excel at
 > [converter.arianesline.com](https://converter.arianesline.com) — no software to install.
-> See [MnemoLink - Data Transfer](./MNEMOLINK.md).
 
   ![browser_main.png](/img/browser_main.png)
 
   ![browser_map.png](/img/browser_map.png)
+
+### Converting a DMP to Excel {#converting-a-dmp-to-excel}
+
+A DMP file downloaded from the device's web page can be turned into a spreadsheet
+without installing anything:
+
+**[converter.arianesline.com](https://converter.arianesline.com)**
+
+Drop the `.dmp` on the page and you get back an Excel workbook with a summary of the
+survey, one sheet containing every shot, and one sheet per section. CSV and JSON are
+available too. The file is converted on the spot and is never stored.
 
 ---
 
@@ -115,18 +118,6 @@ If your local network is not accessible you can configure the MNemo as a Wireles
 Navigate to **OPTIONS > WIFI > WIFI AP** and select the entry.
 
 You can then connect your computer (or phone) to the wireless network created _(SSID: **Mnemo**, Password: **password**)_ and navigate to the displayed IP address as you would on a local network.
-
----
-
-## Network Scan and Data Download with MNemoLink
-
-You can use MNemoLink to scan your network and find your MNemo.
-
-![Screenshot 2024-01-25 075328.png](/img/Screenshot_2024-01-25_075328.png)
-
-Once found, you can download the data through WiFi.
-
-![Screenshot 2024-01-25 075618.png](/img/Screenshot_2024-01-25_075618.png)
 
 ---
 

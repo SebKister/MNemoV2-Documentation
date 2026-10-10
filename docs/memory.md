@@ -10,7 +10,7 @@ You can erase the memory by going to:
 > 
 
 A DMP you have backed up can be turned into a spreadsheet at any time — drop it on
-[converter.arianesline.com](https://converter.arianesline.com). See [MnemoLink - Data Transfer](./MNEMOLINK.md).
+[converter.arianesline.com](https://converter.arianesline.com). See [Converting a DMP to Excel](WIFI-Data-transfer.md#converting-a-dmp-to-excel).
 
 
 

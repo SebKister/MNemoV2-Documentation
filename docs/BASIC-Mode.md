@@ -16,7 +16,6 @@ You’ll notice a flashing _**green**_ screen displaying STANDBY or an icon as w
 > 
 > ![screencap1702387287.png](/img/screencap1702387287.png)
 
-> You can adjust the amount of time required to validate a command in the Setting section of MnemoLink
 - From STANDBY mode, to start a section hold the slider left the screen turns WHITE, this indicates READY mode.
 
 ![screencap1702908903.png](/img/screencap1702908903.png)

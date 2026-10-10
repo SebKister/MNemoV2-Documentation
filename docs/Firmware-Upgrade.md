@@ -1,5 +1,5 @@
 # Firmware Update
-The MNemo can update its firmware **over WiFi (over-the-air)** or **over USB**. Over-the-air is the easiest once a device has been set up for it; the USB methods below always work and are needed for the one-time switch-over.
+The MNemo can update its firmware **over WiFi (over-the-air)** or **over USB**. Over-the-air is the easiest once a device has been set up for it; the USB method below always works and is needed for the one-time switch-over.
 
 ## Update over WiFi (over-the-air) ##
 
@@ -17,20 +17,10 @@ From **v3.2.0**, the MNemo can download and install new firmware by itself, over
 
 After every update — over WiFi or over USB — the MNemo shows a short **What's New** page on the first boot, listing the release's headline features. Press **SELECT** to page through it. You only see it **once per update**, and you can read it again any time from **OPTIONS > SETTINGS > SYSTEM > WHAT'S NEW**.
 
-## Automatic update ##
-
-With the introduction of [MNemoLink v1.4.0](https://github.com/SebKister/MNemoLink/releases/latest), the firmware process has been simplified.
-When you connect the device to the computer and open MNemoLink, the application will look if a new version of the firmware is available.
-
-![Screenshot 2024-01-01 142739.png](/img/Screenshot_2024-01-01_142739.png)
-
-
-If so, it will allow you to update the firmware automatically to the latest version by pressing the yellow update button. 
-
 ## Manual update ##
 
 - Download the [latest firmware](https://github.com/Ariane-s-Line/Mnemo-V2-Releases/releases/latest) on Github ( It’s a file with a .UF2 extension)
-- Connect the device to your computer and go to:
+- Connect the device to your computer (see [USB Connection](USB-Connection.md)) and go to:
 
 **OPTIONS > SETTINGS > SYSTEM > UPDATE**
 

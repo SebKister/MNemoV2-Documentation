@@ -4,13 +4,13 @@ The Mnemo exposes a **serial command-line interface (CLI)** over its USB connect
 It lets you read data, change settings, and run diagnostics from a computer — including
 several settings that are not available from the on-device menu.
 
-Most users will never need this: the [MNemoLink](MNEMOLINK.md) desktop software drives
-these same commands behind a friendly interface. The CLI is documented here for advanced
-users and troubleshooting.
+Most users will never need this: the on-device menus and the device's
+[web page](WIFI-Data-transfer.md) cover everyday use. The CLI is documented here for
+advanced users and troubleshooting.
 
 ## Connecting
 
-1. Connect the Mnemo to your computer with the USB cable (see [MnemoLink – Data Transfer](MNEMOLINK.md) for cabling).
+1. Connect the Mnemo to your computer with the USB cable (see [USB Connection](USB-Connection.md)).
 2. Open any serial terminal program and connect to the Mnemo's serial port at **57600 baud**.
 3. Type a command name, optionally followed by arguments, and press **Enter**.
 
