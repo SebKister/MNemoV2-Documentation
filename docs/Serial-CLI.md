@@ -56,7 +56,7 @@ during normal use.
 
 | Command | Arguments | Description |
 |---------|-----------|-------------|
-| `addwifinet` | `NetworkName Password` | Adds a WiFi network to the device, or replaces the password of one already saved under that name: a name of 1 to 32 bytes, and a password of 8 to 63 characters (an accented letter counts as 2), or none for an open network. Up to 20 networks are kept. A network that does not fit is refused with an error line saying why, and nothing is saved. An error line also reports a network the WiFi module's storage did not keep. |
+| `addwifinet` | `NetworkName Password` | Adds a WiFi network to the device, or replaces the password of one already saved under that name: a name of 1 to 32 bytes, and a password of 8 to 63 characters (an accented letter counts as 2), or none for an open network. If either contains a space, put both in double quotes: `addwifinet "My network" "my password"`. Up to 20 networks are kept. A network that does not fit is refused with an error line saying why, and nothing is saved. An error line also reports a network the WiFi module's storage did not keep. |
 | `removewifinet` | `NetworkName Password` | Removes a WiFi network from the device. |
 | `clearwifinet` | — | Clears the entire list of saved networks. |
 | `listwifinet` | — | Reads the list of saved networks. |
