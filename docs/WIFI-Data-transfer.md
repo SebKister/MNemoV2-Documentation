@@ -23,14 +23,30 @@ it drops the network connection and switches the device over to its own AP.
 
 ### Adding networks
 
-Networks are added from the device's web page *(v3.0.0+)*:
-- Connect the Mnemo to WiFi (see below), then navigate to its IP address in a browser. A new
-  device knows no network yet: use its [access point](#the-mnemo-as-wireless-access-point).
-- Use the network management section of the web page to add or remove networks directly.
+Before the Mnemo can connect to your local network, it needs that network's name and
+password. You give them to it through the Mnemo's own WiFi access point:
 
-Over USB, the `addwifinet` [serial command](Serial-CLI.md) adds a network too.
+1. On the Mnemo, go to **OPTIONS > WIFI** and select **WIFI AP**. The Mnemo starts its own
+   WiFi network, named after the device (**MNemo** unless you renamed it), with the password
+   **password**.
+2. On your phone or computer, join that network. Then open a browser at the IP address shown
+   on the Mnemo's screen (normally `192.168.4.1`). *(v3.1.0+)* The Mnemo also shows QR codes
+   that do both for you: see [WiFi QR onboarding](#wifi-qr-onboarding-v310).
+3. On the Mnemo's web page, press **Settings**. In the **Known networks** card, enter your
+   local network's name under **SSID** and its password under **Password**, then press
+   **Add network**. The page confirms with **Network saved.**
+4. On the Mnemo, select **OPTIONS > WIFI > WIFI ON/OFF**, which reads **WIFI (AP)** while the
+   access point is on. The Mnemo closes its access point and connects to your local
+   network: see [Connecting](#connecting).
 
-> Network names and passwords must not contain spaces and the network must operate on 2.4 GHz.
+> The local network must operate on **2.4 GHz**: the Mnemo cannot connect to a 5 GHz
+> network. If your router gives its 2.4 GHz and 5 GHz networks different names, add the
+> 2.4 GHz one.
+>
+> Network names and passwords must not contain spaces.
+
+The Mnemo keeps up to 20 networks. The same **Known networks** card removes a network, or
+all of them. Over USB, the `addwifinet` [serial command](Serial-CLI.md) adds a network too.
 
 If networks you add are gone the next time you turn WiFi on, see
 [Saved networks are not kept](#saved-networks-are-not-kept).
@@ -106,7 +122,7 @@ Once the Mnemo connects to your network it shows a QR code containing the page a
 
 In AP mode the onboarding happens in two stages:
 
-1. **Join QR** — encodes the AP credentials (`SSID: Mnemo`, `Password: password`). Point your phone's camera at it and tap the prompt to join the Mnemo's network — no typing.
+1. **Join QR** — encodes the AP credentials (the device's name as SSID, `MNemo` unless you renamed it, and `Password: password`). Point your phone's camera at it and tap the prompt to join the Mnemo's network — no typing.
 2. **Open-page QR** — appears automatically once your phone associates with the AP. Scan it to open the Mnemo's page in the browser. The QR dismisses itself the moment the page actually loads, returning the OLED to its normal screen.
 
 You can dismiss either QR at any time with the device's **NEXT** or **SELECT** buttons.
@@ -116,10 +132,12 @@ You can dismiss either QR at any time with the device's **NEXT** or **SELECT** b
 ## The Mnemo as Wireless Access Point
 
 If your local network is not accessible you can configure the MNemo as a Wireless Access Point.
+It is also how you give the Mnemo your local network in the first place: see
+[Adding networks](#adding-networks).
 
 Navigate to **OPTIONS > WIFI > WIFI AP** and select the entry.
 
-You can then connect your computer (or phone) to the wireless network created _(SSID: **Mnemo**, Password: **password**)_ and navigate to the displayed IP address as you would on a local network.
+You can then connect your computer (or phone) to the wireless network created _(SSID: the device's name, **MNemo** unless you renamed it; Password: **password**)_ and navigate to the displayed IP address as you would on a local network.
 
 ---
 
