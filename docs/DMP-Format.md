@@ -9,10 +9,13 @@ self-contained: no access to the device or its firmware is required.
 A DMP file is the MNemo's lossless export format. It contains every survey
 *section* recorded since the device memory was last erased, each section holding a
 sequence of fixed-size *shot* records. Files are obtained from the device's
-[WiFi download page](WIFI-Data-transfer.md) or through
-[MNemoLink](MNEMOLINK.md), and are named
+[WiFi download page](WIFI-Data-transfer.md), and are named
 `MNEMOYYMMDDHHMMSS.dmp` (two digits per date/time component, date of the
 download).
+
+The DMP data from the MNemo can be converted online at
+[converter.arianesline.com](https://converter.arianesline.com), to an Excel workbook,
+CSV or JSON, with nothing to install.
 
 ---
 

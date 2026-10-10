@@ -4,7 +4,7 @@
 
 *A fix release: two features that caused more trouble than they solved are gone, BASIC and the screen saver behave the way you would expect, WiFi passwords full of symbols work, and updates are checked before they are trusted.*
 
-- **The double tap no longer opens the map.** Tapping the back of the Mnemo twice used to bring up the current survey's map. In BASIC and ECO, the **LEFT-RIGHT-LEFT-RIGHT** [click command](BASIC-Mode-Clicks.md) still does. In Verbose mode there is no longer a way to see the section you are surveying: its map is under **OPTIONS > HISTORY** once you have ended it. The *Double-tap map display* setting is gone from the web page, and so are the `activatedoubletap` and `deactivatedoubletap` [serial commands](Serial-CLI.md). MNemoLink's *Double Tap* setting no longer has any effect.
+- **The double tap no longer opens the map.** Tapping the back of the Mnemo twice used to bring up the current survey's map. In BASIC and ECO, the **LEFT-RIGHT-LEFT-RIGHT** [click command](BASIC-Mode-Clicks.md) still does. In Verbose mode there is no longer a way to see the section you are surveying: its map is under **OPTIONS > HISTORY** once you have ended it. The *Double-tap map display* setting is gone from the web page, and so are the `activatedoubletap` and `deactivatedoubletap` [serial commands](Serial-CLI.md).
 - **The click threshold no longer changes on its own.** Since v2.6.9, four presses in a row that the slider did not register lowered the click threshold and saved it, and the device stopped for two seconds on a **NEW BUTTON THR** message, in the middle of a survey too. The threshold now changes only when you set it: in the **Slider button** card of the web page, or with the `setclickthreshold` [serial command](Serial-CLI.md). A threshold lowered this way before the update stays as it is until you set it again.
 - **The serial click settings refuse out-of-range values.** `setclickthreshold` now ignores values outside 10–90 and `setunclickdelta` outside 2–40, instead of saving them: a typo could leave the slider unusable until the next power-on.
 - **BASIC keeps your legs straight.** The IN and OUT [click commands](BASIC-Mode-Clicks.md) (**LEFT-LEFT-LEFT-LEFT** and **RIGHT-RIGHT-RIGHT-RIGHT**) now work only in STANDBY, as this manual has always said: one mistyped command in the middle of a section used to shift every [LRUD](LRUD.md) for the rest of that section by one station. A leg you cancelled, or one that failed to save, no longer leaves its values behind for the next marker or LRUD to write onto the previous leg. A marker never gives a leg a second number, and the LRUD entered for the next leg no longer lands on the one you just shot. With **LRUD (OFF)** in the settings, one LRUD entry no longer rides along on every later leg, or into the next section. Closing the map no longer leaves its page-turn clicks behind to start the next leg or click command.
@@ -75,7 +75,7 @@
 - **Multilingual UI**: on-device menus and messages are now available in English, Spanish, French, German, Simplified Chinese and Traditional Chinese. Language can be changed at any time in OPTIONS > SETTINGS > DEVICE SETTINGS > LANGUAGE.
 - **3D map view**: when viewing a survey map (from History or BASIC mode shortcut), press the select button to cycle between 2D map, 3D perspective view and statistics. In 3D mode the device orientation controls the camera angle.
 - **WiFi at Start**: new option (OPTIONS > WIFI > WIFI ON AT START) to automatically start the device's WiFi access point on every power-on. The access point turns off automatically after 30 seconds if unused.
-- **Web interface network management**: WiFi networks can now be added and removed directly from the device's built-in web page, without MNemoLink.
+- **Web interface network management**: WiFi networks can now be added and removed directly from the device's built-in web page.
 - **Menu reorganisation**: Settings is now split into *Device Settings* (display, units, language) and *System* (update, reset). The Extras menu is renamed to Tools and WiFi has its own dedicated submenu under Options.
 - **Button auto-calibration**: performing 4 consecutive clicks on either side of the slider automatically calibrates the button press-force threshold.
 
@@ -110,7 +110,7 @@
 - Added icon ![](/img/depthissue.png) to signal the depth variation is bigger than length of line.
 
 ## v2.6.1 ##
-- Support for MNemoLink network scan
+- Support for network scans that find the device on the local network
 
 ## v2.6.0 ##
 

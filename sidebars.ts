@@ -50,7 +50,7 @@ const sidebars: SidebarsConfig = {
     'Date-Synchronization',
     'Battery',
     'Extras',
-    'MNEMOLINK',
+    'USB-Connection',
     'Serial-CLI',
     'WIFI-Data-transfer',
     'DMP-Format',
