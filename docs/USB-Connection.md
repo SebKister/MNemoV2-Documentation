@@ -16,11 +16,16 @@ The blue led indicates that the connection to the computer/charger was successfu
 
 Turn on MNemo. At that point your computer should have recognized the device.
 
-## What you can do over USB ##
+## Downloading your surveys ##
+
+Ariane can read the survey data directly from the device over USB. Use the latest version
+of Ariane.
+
+> Downloading over WiFi, from the device's web page, is the recommended method: see
+> [Wireless Data Transfer](WIFI-Data-transfer.md).
+
+## What else you can do over USB ##
 
 - Update the firmware: see [Firmware Update](Firmware-Upgrade.md).
 - Read data, change settings and run diagnostics from a terminal: see
   [Serial CLI](Serial-CLI.md).
-
-To download your surveys, use the device's web page: see
-[Wireless Data Transfer](WIFI-Data-transfer.md).

@@ -48,6 +48,8 @@ The Mnemo will try to connect to its known networks. If successful it returns to
 > The icon in the top left corner indicates the strength of the wireless connection between the router and the MNemo.
 
 Open a browser and navigate to the displayed IP address to preview surveys or download your data.
+This is the recommended way to download your surveys. Ariane can also read them directly
+from the device over USB: see [USB Connection](USB-Connection.md).
 
 > The DMP you download here can be converted to Excel at
 > [converter.arianesline.com](https://converter.arianesline.com) — no software to install.
