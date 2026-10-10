@@ -22,8 +22,25 @@ jobs:
         env:
           VERSION: ${{ inputs.version }}
         run: |
-          curl -fsSL "https://manuals.arianesline.com/mnemo/pdf/MNemo-UserManual-latest.pdf" \
+          # Fetch the server's copy, not Cloudflare's. The site serves PDFs with
+          # Cache-Control: max-age=604800, so for up to a week after a deploy the
+          # plain URL can still return the PDF from before it. A query string
+          # unique to this run misses that cache, and Cloudflare fetches the file
+          # from the server.
+          curl -fsSL -D "$RUNNER_TEMP/pdf-headers.txt" \
+            "https://manuals.arianesline.com/mnemo/pdf/MNemo-UserManual-latest.pdf?run=${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
             -o "static/pdf/MNemo-UserManual-v${VERSION}.pdf"
+          grep -i -E '^(last-modified|cf-cache-status):' "$RUNNER_TEMP/pdf-headers.txt" || true
+          # A cache answer here means Cloudflare no longer keys on the query
+          # string, and the copy may predate the last deploy: stop rather than
+          # freeze it.
+          status=$(grep -i '^cf-cache-status:' "$RUNNER_TEMP/pdf-headers.txt" | tail -n 1 | tr -d '\r' | awk '{print toupper($2)}')
+          case "$status" in
+            HIT|STALE|UPDATING)
+              echo "::error::Cloudflare answered from its cache ($status), so this PDF may predate the last deploy. Purge https://manuals.arianesline.com/mnemo/pdf/MNemo-UserManual-latest.pdf in Cloudflare, then run this workflow again."
+              exit 1
+              ;;
+          esac
           python3 - <<'PY'
           import json, os, datetime
           v = os.environ["VERSION"].lstrip("v")
