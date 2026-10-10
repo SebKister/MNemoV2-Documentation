@@ -24,6 +24,11 @@ of Ariane.
 > Downloading over WiFi, from the device's web page, is the recommended method: see
 > [Wireless Data Transfer](WIFI-Data-transfer.md).
 
+The DMP data from the Mnemo can be converted online at
+[converter.arianesline.com](https://converter.arianesline.com), to an Excel workbook, CSV
+or JSON, with nothing to install: see
+[Converting a DMP to Excel](WIFI-Data-transfer.md#converting-a-dmp-to-excel).
+
 ## What else you can do over USB ##
 
 - Update the firmware: see [Firmware Update](Firmware-Upgrade.md).

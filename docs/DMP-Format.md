@@ -13,6 +13,10 @@ sequence of fixed-size *shot* records. Files are obtained from the device's
 `MNEMOYYMMDDHHMMSS.dmp` (two digits per date/time component, date of the
 download).
 
+The DMP data from the MNemo can be converted online at
+[converter.arianesline.com](https://converter.arianesline.com), to an Excel workbook,
+CSV or JSON, with nothing to install.
+
 ---
 
 ## 1. File encoding
