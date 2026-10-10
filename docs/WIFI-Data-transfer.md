@@ -42,8 +42,6 @@ password. You give them to it through the Mnemo's own WiFi access point:
 > The local network must operate on **2.4 GHz**: the Mnemo cannot connect to a 5 GHz
 > network. If your router gives its 2.4 GHz and 5 GHz networks different names, add the
 > 2.4 GHz one.
->
-> Network names and passwords must not contain spaces.
 
 The Mnemo keeps up to 20 networks. The same **Known networks** card removes a network, or
 all of them. Over USB, the `addwifinet` [serial command](Serial-CLI.md) adds a network too.
