@@ -33,6 +33,10 @@ screen**. The colours are exactly the ones you already know from BASIC:
 (These are the default colours. If you changed them with the `setcolor`
 [serial command](Serial-CLI.md), ECO uses your colours too.)
 
+In READY the disc also shows whether the wheel is on the line *(v3.4.2+)*: slide the
+MNemo a little along the line, and while the wheel turns the disc blinks between white
+and a dimmer white. See [Is the wheel on the line?](BASIC-Mode.md#is-the-wheel-on-the-line)
+
 The screen is also refreshed **twice a second instead of five times a second**.
 Together these bring the device down to **about 27 mA while surveying, against
 55–57 mA in BASIC** — better than half the power for the same survey.

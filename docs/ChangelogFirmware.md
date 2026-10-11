@@ -1,5 +1,13 @@
 # Change Log Firmware
 
+## v3.4.2 ##
+
+*READY now tells you whether the wheel is on the line.*
+
+- **Is the wheel on the line?** In BASIC and ECO, READY now shows whether the wheel turns: slide the Mnemo a little along the line, and while the wheel turns the screen (in ECO, the disc) blinks between READY's colour and a dimmer, half-strength copy of it. If it stays steady, the wheel is not turning. Nothing is measured, and the wheel's sensors are only flashed for an instant 20 times a second, so the check costs next to no battery. See [Is the wheel on the line?](BASIC-Mode.md#is-the-wheel-on-the-line).
+
+> Coming from **v3.4.1**, this update arrives over WiFi as usual. Coming from **v3.4.0** it does too, but the download is still done by v3.4.0's code: if it fails part way, start **OTA UPDATE** again before you switch the Mnemo off (see the note under v3.4.1). Coming from **v3.1.1 or older**, the one-time USB update described in [Firmware Update](Firmware-Upgrade.md) is still needed before over-the-air updates work at all.
+
 ## v3.4.1 ##
 
 *A fix release: two features that caused more trouble than they solved are gone, BASIC and the screen saver behave the way you would expect, WiFi passwords full of symbols work, and updates are checked before they are trusted.*

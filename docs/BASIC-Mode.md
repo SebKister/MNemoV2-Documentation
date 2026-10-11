@@ -21,6 +21,7 @@ You’ll notice a flashing _**green**_ screen displaying STANDBY or an icon as w
 ![screencap1702908903.png](/img/screencap1702908903.png)
 > By default, in any BASIC survey mode all surveys are recorded IN and are named “BAS”. You can then later sort out the data on your favorite survey software.
 - Clip the device on the line at the beginning of the first shot.
+- Slide it a little along the line: if the screen blinks, the wheel is on the line *(v3.4.2+)*. See [Is the wheel on the line?](#is-the-wheel-on-the-line)
 - Hold the slider left the background turns RED, you are in STABILIZE mode ( same as in Verbose survey mode).
 
 ![screencap1702387334.png](/img/screencap1702387334.png)
@@ -51,6 +52,27 @@ To exit BASIC survey mode, from the STANDBY mode, hold the cursor to the right d
 > **On a long dive, see [ECO Mode](ECO-Mode.md)** _(v3.4.0+)_ — the same survey,
 > the same clicks, drawn as a single small coloured dot on a black screen for about
 > half the battery draw.
+
+## Is the wheel on the line? *(v3.4.2+)* {#is-the-wheel-on-the-line}
+
+You can check that the line runs through the wheel before you start a shot. In READY,
+slide the MNemo a few centimetres along the line:
+
+- **The screen blinks** between white and a dimmer, half-strength white: the wheel is
+  turning, so the line is in it.
+- **The screen stays plain white**: the wheel is not turning. Check that the line sits
+  in the wheel and is tight enough (see [Tips and Tricks](tipsandtricks.md)).
+
+About a second after you stop, the screen is plain white again.
+
+Nothing is measured while you check: the screen keeps showing your last shot, and the
+next shot is measured only once you start it. Nor does the check cost any battery
+worth mentioning: in READY the wheel's sensors are never left on; they are only
+flashed for an instant 20 times a second, the way the slider is read.
+
+In [ECO](ECO-Mode.md) the small disc blinks the same way. If you changed READY's
+colour with the `setcolor` [serial command](Serial-CLI.md), it is your colour that
+blinks, between full and half strength.
 
 ## BASIC Mode Overview ##
 
