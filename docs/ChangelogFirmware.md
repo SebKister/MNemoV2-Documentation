@@ -2,9 +2,11 @@
 
 ## v3.4.2 ##
 
-*READY now tells you whether the wheel is on the line.*
+*A release for the wheel: READY now tells you whether it is on the line, ECO no longer keeps it lit through every shot, and a shot no longer gains a tick as it ends.*
 
 - **Is the wheel on the line?** In BASIC and ECO, READY now shows whether the wheel turns: slide the Mnemo a little along the line, and while the wheel turns the screen (in ECO, the disc) blinks between READY's colour and a dimmer, half-strength copy of it. If it stays steady, the wheel is not turning. Nothing is measured, and the wheel's sensors are only flashed for an instant 20 times a second, so the check costs next to no battery. See [Is the wheel on the line?](BASIC-Mode.md#is-the-wheel-on-the-line).
+- **ECO draws less while it measures.** The wheel's two light sensors draw about 15 mA when lit, and every survey mode kept them lit through the whole of every shot. ECO now flashes them 500 times a second instead, each time just long enough for one reading, so they draw under half a milliamp; the shot is counted exactly as before. See [The wheel is flashed, not lit](ECO-Mode.md#the-wheel-is-flashed-not-lit).
+- **A shot no longer gains a tick as it ends.** In every survey mode, switching the wheel's sensors off at the end of a shot could count one more tick of the wheel, so the shot could come out one tick, about 2 cm, too long. The switch-off is no longer counted.
 
 > Coming from **v3.4.1**, this update arrives over WiFi as usual. Coming from **v3.4.0** it does too, but the download is still done by v3.4.0's code: if it fails part way, start **OTA UPDATE** again before you switch the Mnemo off (see the note under v3.4.1). Coming from **v3.1.1 or older**, the one-time USB update described in [Firmware Update](Firmware-Upgrade.md) is still needed before over-the-air updates work at all.
 

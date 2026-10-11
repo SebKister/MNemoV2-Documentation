@@ -49,6 +49,17 @@ Together these bring the device down to **about 27 mA while surveying, against
 > The click-code reminder is still shown in ECO. Dropping it would have saved
 > about 1.5 mA, which is not worth losing the reference underwater.
 
+## The wheel is flashed, not lit *(v3.4.2+)* {#the-wheel-is-flashed-not-lit}
+
+The wheel is read by two small light sensors, which draw about **15 mA** when lit.
+BASIC and Verbose keep them lit for the whole of every shot. ECO now flashes them
+instead, **500 times a second**, each time just long enough to take one reading: they
+are lit less than 3% of the time, and draw under half a milliamp while a shot is read.
+
+Nothing else changes. The blue/violet disc still flickers as the wheel turns, and the
+shot is counted exactly as with the sensors lit at any speed you can swim: a flash
+could only miss part of the wheel's turn above about 9 m/s.
+
 ## ECO sections are named E##
 
 A survey shot in BASIC is stored as `B01`, `B02`… A survey shot in ECO is stored

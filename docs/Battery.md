@@ -30,6 +30,10 @@ anything:
   survey — about **27 mA against BASIC's 55–57 mA** — by replacing the full-screen
   colour with a single small coloured dot on a black screen.
 
+From **v3.4.2**, ECO also stops lighting the wheel through every shot: it flashes the
+wheel's sensors instead, so they draw under half a milliamp rather than about 15 mA
+while you measure. See [The wheel is flashed, not lit](ECO-Mode.md#the-wheel-is-flashed-not-lit).
+
 ## Low battery
 
 When the pack runs low, a **low-battery icon** appears on the screen and the
