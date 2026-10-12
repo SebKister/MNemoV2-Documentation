@@ -31,7 +31,7 @@ anything:
   colour with a single small coloured dot on a black screen.
 
 From **v3.4.2**, ECO also stops lighting the wheel through every shot: it flashes the
-wheel's sensors instead, so they draw under half a milliamp rather than about 15 mA
+wheel's sensors instead, so they draw about 2 mA rather than about 15 mA
 while you measure. See [The wheel is flashed, not lit](ECO-Mode.md#the-wheel-is-flashed-not-lit).
 
 ## Low battery

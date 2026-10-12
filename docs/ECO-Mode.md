@@ -53,8 +53,10 @@ Together these bring the device down to **about 27 mA while surveying, against
 
 The wheel is read by two small light sensors, which draw about **15 mA** when lit.
 BASIC and Verbose keep them lit for the whole of every shot. ECO now flashes them
-instead, **500 times a second**, each time just long enough to take one reading: they
-are lit less than 3% of the time, and draw under half a milliamp while a shot is read.
+instead, **500 times a second**, each time just long enough for them to light up and
+be read: they are lit about an eighth of the time, and draw about **2 mA** while a
+shot is read. They also stay dark while the slider is read, so it reads as steadily
+as ever.
 
 Nothing else changes. The blue/violet disc still flickers as the wheel turns, and the
 shot is counted exactly as with the sensors lit at any speed you can swim: a flash
