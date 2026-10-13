@@ -33,7 +33,7 @@ screen**. The colours are exactly the ones you already know from BASIC:
 (These are the default colours. If you changed them with the `setcolor`
 [serial command](Serial-CLI.md), ECO uses your colours too.)
 
-In READY the disc also shows whether the wheel is on the line *(v3.4.2+)*: slide the
+In READY the disc also shows whether the wheel is on the line *(v3.4.3+)*: slide the
 MNemo a little along the line, and while the wheel turns the disc blinks between white
 and a dimmer white. See [Is the wheel on the line?](BASIC-Mode.md#is-the-wheel-on-the-line)
 
@@ -49,7 +49,7 @@ Together these bring the device down to **about 27 mA while surveying, against
 > The click-code reminder is still shown in ECO. Dropping it would have saved
 > about 1.5 mA, which is not worth losing the reference underwater.
 
-## The wheel is flashed, not lit *(v3.4.2+)* {#the-wheel-is-flashed-not-lit}
+## The wheel is flashed, not lit *(v3.4.3+)* {#the-wheel-is-flashed-not-lit}
 
 The wheel is read by two small light sensors, which draw about **15 mA** when lit.
 BASIC and Verbose keep them lit for the whole of every shot. ECO now flashes them

@@ -21,7 +21,7 @@ You’ll notice a flashing _**green**_ screen displaying STANDBY or an icon as w
 ![screencap1702908903.png](/img/screencap1702908903.png)
 > By default, in any BASIC survey mode all surveys are recorded IN and are named “BAS”. You can then later sort out the data on your favorite survey software.
 - Clip the device on the line at the beginning of the first shot.
-- Slide it a little along the line: if the screen blinks, the wheel is on the line *(v3.4.2+)*. See [Is the wheel on the line?](#is-the-wheel-on-the-line)
+- Slide it a little along the line: if the screen blinks, the wheel is on the line *(v3.4.3+)*. See [Is the wheel on the line?](#is-the-wheel-on-the-line)
 - Hold the slider left the background turns RED, you are in STABILIZE mode ( same as in Verbose survey mode).
 
 ![screencap1702387334.png](/img/screencap1702387334.png)
@@ -53,7 +53,7 @@ To exit BASIC survey mode, from the STANDBY mode, hold the cursor to the right d
 > the same clicks, drawn as a single small coloured dot on a black screen for about
 > half the battery draw.
 
-## Is the wheel on the line? *(v3.4.2+)* {#is-the-wheel-on-the-line}
+## Is the wheel on the line? *(v3.4.3+)* {#is-the-wheel-on-the-line}
 
 You can check that the line runs through the wheel before you start a shot. In READY,
 slide the MNemo a few centimetres along the line, slowly or briskly:

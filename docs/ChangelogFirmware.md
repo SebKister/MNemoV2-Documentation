@@ -1,8 +1,10 @@
 # Change Log Firmware
 
-## v3.4.2 ##
+## v3.4.3 ##
 
 *A release for the wheel: READY now tells you whether it is on the line, ECO no longer keeps it lit through every shot, and a shot no longer gains a tick as it ends.*
+
+> **v3.4.2 was withdrawn** a few hours after its release on 13 October 2026. In BASIC and Verbose, a shot could come out one tick of the wheel, about 2 cm, short if the wheel had turned since the last shot, as it does when you check the line in READY, and an AUTO calibration could lose a tick the same way. v3.4.3 is v3.4.2 with that fixed. If you ran the AUTO calibration on v3.4.2, run it again.
 
 - **Is the wheel on the line?** In BASIC and ECO, READY now shows whether the wheel turns: slide the Mnemo a little along the line, and while the wheel turns the screen (in ECO, the disc) blinks between READY's colour and a dimmer, half-strength copy of it. If it stays steady, the wheel is not turning. Nothing is measured, and the wheel's sensors are only flashed for an instant, 100 times a second, about 0.4 mA. In BASIC, a READY colour set with `setcolor` too dark to show READY's black icon at half strength blinks to a lighter shade instead. See [Is the wheel on the line?](BASIC-Mode.md#is-the-wheel-on-the-line).
 - **ECO draws less while it measures.** The wheel's two light sensors draw about 15 mA when lit, and every survey mode kept them lit through the whole of every shot. ECO now flashes them 500 times a second instead, each time just long enough for one reading, so they draw about 2 mA, and they stay dark while the slider is read; the shot is counted exactly as before. See [The wheel is flashed, not lit](ECO-Mode.md#the-wheel-is-flashed-not-lit).
@@ -11,10 +13,11 @@
 - **The screen saver no longer freezes the Mnemo.** Left idle on USB for an hour or so, the Mnemo could freeze: the screen went black, the battery icon stopped blinking, and the slider did nothing until it was unplugged. It could also happen on battery, on a Mnemo switched on for more than 72 minutes and then left idle on the menu, which then never switched itself off.
 - **Smaller fixes**:
   - closing the map in READY brings READY straight back, with its readings: the map's last page used to stay on the screen;
+  - closing the map during a shot brings the shot's screen straight back: the map's last page used to stay until the wheel turned;
   - after a shot or a cancelled shot, READY shows its readings at once rather than a second later;
   - BASIC writes in white on a state colour set with `setcolor` too dark for black writing.
 
-> Coming from **v3.4.1**, this update arrives over WiFi as usual. Coming from **v3.4.0** it does too, but the download is still done by v3.4.0's code: if it fails part way, start **OTA UPDATE** again before you switch the Mnemo off (see the note under v3.4.1). Coming from **v3.1.1 or older**, the one-time USB update described in [Firmware Update](Firmware-Upgrade.md) is still needed before over-the-air updates work at all. After updating, run the wheel's AUTO calibration again if you last ran it on v3.4.1 or older.
+> Coming from **v3.4.1**, or the withdrawn **v3.4.2**, this update arrives over WiFi as usual. Coming from **v3.4.0** it does too, but the download is still done by v3.4.0's code: if it fails part way, start **OTA UPDATE** again before you switch the Mnemo off (see the note under v3.4.1). Coming from **v3.1.1 or older**, the one-time USB update described in [Firmware Update](Firmware-Upgrade.md) is still needed before over-the-air updates work at all. After updating, run the wheel's AUTO calibration again if you last ran it on v3.4.2 or older.
 
 ## v3.4.1 ##
 

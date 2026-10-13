@@ -54,6 +54,6 @@ graph TD
 | Color | Phase | Description |
 |-------|-------|-------------|
 | 🟢 Green (blinking) | Standby | Waiting to start a section |
-| ⬜ White | Ready | Ready to begin a shot. In BASIC and ECO it blinks to a dimmer white while the wheel turns, so you can check the wheel is on the line *(v3.4.2+)* |
+| ⬜ White | Ready | Ready to begin a shot. In BASIC and ECO it blinks to a dimmer white while the wheel turns, so you can check the wheel is on the line *(v3.4.3+)* |
 | 🔴 Red | Stabilize | Compass is measuring the azimuth — keep the device still |
 | 🔵 Blue / Violet | Reading | Wheel is measuring the distance — move along the line |
