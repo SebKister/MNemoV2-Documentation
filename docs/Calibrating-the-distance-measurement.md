@@ -19,5 +19,10 @@ After each change take a length measurement of a line with a known length and co
 - Once done you’ll get a message Adjustment : X , X being the adjustment factor _( How much the factor needs to be changed to have a good measure)_.
 - Repeat that operation until you get an adjustment factor of **0** or **1**.
 
+> **Calibrated on v3.4.1 or older? Run the Automatic Calibration again** *(v3.4.2+)*.
+> Before v3.4.2, switching the wheel off at the end of a measurement could add one
+> tick to it, about 2 cm, the calibration's 5 m included. A calibration that made up
+> for that tick makes every shot about 0.5% too short once the tick is gone.
+
 >Tip: If at any point during a survey dive you realize that the line measurement is not working anymore, change the parameter WM to the value 1 or 2 instead of 0. Try both setting to find the one that is still working.
 

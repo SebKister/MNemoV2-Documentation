@@ -33,6 +33,10 @@ screen**. The colours are exactly the ones you already know from BASIC:
 (These are the default colours. If you changed them with the `setcolor`
 [serial command](Serial-CLI.md), ECO uses your colours too.)
 
+In READY the disc also shows whether the wheel is on the line *(v3.4.2+)*: slide the
+MNemo a little along the line, and while the wheel turns the disc blinks between white
+and a dimmer white. See [Is the wheel on the line?](BASIC-Mode.md#is-the-wheel-on-the-line)
+
 The screen is also refreshed **twice a second instead of five times a second**.
 Together these bring the device down to **about 27 mA while surveying, against
 55–57 mA in BASIC** — better than half the power for the same survey.
@@ -44,6 +48,19 @@ Together these bring the device down to **about 27 mA while surveying, against
 
 > The click-code reminder is still shown in ECO. Dropping it would have saved
 > about 1.5 mA, which is not worth losing the reference underwater.
+
+## The wheel is flashed, not lit *(v3.4.2+)* {#the-wheel-is-flashed-not-lit}
+
+The wheel is read by two small light sensors, which draw about **15 mA** when lit.
+BASIC and Verbose keep them lit for the whole of every shot. ECO now flashes them
+instead, **500 times a second**, each time just long enough for them to light up and
+be read: they are lit about an eighth of the time, and draw about **2 mA** while a
+shot is read. They also stay dark while the slider is read, so it reads as steadily
+as ever.
+
+Nothing else changes. The blue/violet disc still flickers as the wheel turns, and the
+shot is counted exactly as with the sensors lit at any speed you can swim: a flash
+could only miss part of the wheel's turn above about 9 m/s.
 
 ## ECO sections are named E##
 
