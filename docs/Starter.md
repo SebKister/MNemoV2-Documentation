@@ -1,5 +1,5 @@
 # Version  
-This user manual applies to firmware v3.4.2 and higher.
+This user manual applies to firmware v3.4.3 and higher.
 
 _This firmware requires the latest version of Ariane._
 > the latest firmware is available [here](https://github.com/Ariane-s-Line/Mnemo-V2-Releases/releases/latest) and
