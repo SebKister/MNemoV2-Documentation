@@ -100,6 +100,25 @@ during normal use.
 | `defaultsettings` | — | Restores all default settings **and erases the memory**. |
 | `testmode` | — | Puts the device into Test mode. |
 
+## Battery *(v3.5.0+)* {#battery}
+
+See [A battery gauge that knows your Mnemo](Battery.md#a-battery-gauge-that-knows-your-mnemo).
+
+| Command | Arguments | Description |
+|---------|-----------|-------------|
+| `calibratebattery` | `[volts \| reset]` | With the voltage a multimeter reads on the battery (6.0 to 9.0 V, e.g. `calibratebattery 8.23`), corrects the Mnemo's battery reading and keeps the correction. `reset` removes it. Alone, shows the reading, the percentage and the thresholds in use. |
+| `batterylog` | `[start [seconds] \| stop \| reset \| dump]` | `start` records the battery from full to empty, on battery: unplug the cable within 20 s when the screen asks. The next power-on after the battery runs out makes it the Mnemo's own recording. `stop` drops a recording under way; `reset` goes back to the standard values; `dump` prints the recording in use as `percent,mv`. Alone, shows the state and the recording in use. |
+
+## HOBO temperature loggers *(v3.5.0+, option)*
+
+On a Mnemo with the HOBO option; without it, they answer `HOBO: not activated on this MNemo`. See [HOBO temperature loggers](Extras.md#hobo-temperature-loggers).
+
+| Command | Arguments | Description |
+|---------|-----------|-------------|
+| `hoboscan` | `[seconds] [raw]` | Lists the loggers heard in 1 to 30 s (5 by default), with their current temperature, without connecting to them. |
+| `hobodl` | `serial [raw]` | Downloads the logger with that serial number, saves it on the Mnemo and prints it as CSV. |
+| `hoboread` | `[name [raw]]` | Lists the saved downloads, or prints one as CSV. |
+
 ## Runtime statistics
 
 | Command | Arguments | Description |
@@ -129,8 +148,8 @@ See [Firmware Upgrade](Firmware-Upgrade.md) for the recommended update procedure
 | `setpicswitchonthreshold` | `value` | Sets the PIC switch-on threshold to the given numeric value. |
 | `eepromwrite` | `address byte` | Writes a byte to a specific EEPROM address. |
 | `eepromread` | `address` | Reads a byte from a specific EEPROM address. |
-| `readfile` | `filename` | Reads a file stored on Flash memory. |
-| `erasefile` | `filename` | Erases a file stored on Flash memory. |
+| `readfile` | `filename` | Reads a file stored on Flash memory. *(v3.5.0+)* A name over 28 characters is refused. |
+| `erasefile` | `filename` | Erases a file stored on Flash memory. *(v3.5.0+)* A name over 28 characters is refused. |
 
 _UI-test builds add extra commands (`screencap`, `inject`, `gotomain`) used only for
 automated interface testing; they are not present in production firmware._

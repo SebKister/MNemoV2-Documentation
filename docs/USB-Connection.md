@@ -16,6 +16,10 @@ The blue led indicates that the connection to the computer/charger was successfu
 
 Turn on MNemo. At that point your computer should have recognized the device.
 
+> *(v3.5.0+)* Unplugging the Mnemo and plugging it back into a computer no longer
+> freezes it. Now and then it can **restart** as the contacts touch: it starts up
+> normally, and your surveys are safe.
+
 ## Downloading your surveys ##
 
 Ariane can read the survey data directly from the device over USB. Use the latest version

@@ -1,5 +1,24 @@
 # Change Log Firmware
 
+## v3.5.0 ##
+
+*Your Mnemo can now learn its own battery, a USB replug no longer freezes it, and installing over USB brings an old WiFi radio up to date. With an option, it also downloads HOBO temperature loggers.*
+
+> **v3.5.0 replaces v3.4.4**, which only ever went out as a test version: everything below is new since v3.4.3.
+
+- **A battery gauge that knows your Mnemo.** Every Mnemo used to warn of a low battery at 7.235 V and switch itself off at 7.0 V, whatever its battery. Batteries differ, and on some Mnemos 7.0 V still leaves a fifth of the battery unused: one we measured switched itself off with about 80 minutes left. Each Mnemo can now record its own battery, from full until it is empty, with the `batterylog` [serial command](Serial-CLI.md#battery). From then on its battery percentage comes from that recording, it warns at **10%** and switches itself off at **5%**. `calibratebattery` corrects its voltage reading against a multimeter. If you never use them, nothing changes. See [A battery gauge that knows your Mnemo](Battery.md#a-battery-gauge-that-knows-your-mnemo).
+- **No freeze when you plug it back into a computer.** Unplugging the Mnemo, even briefly, and plugging it back into a computer could freeze it: the screen and the slider stopped responding until you switched it off and on, although the computer still saw it. That's fixed. Now and then, plugging it in can still **restart** the Mnemo as the contacts touch; it starts up normally and your surveys are safe. A charger never froze it.
+- **A USB update brings the WiFi radio up to date.** The Mnemo's WiFi has its own firmware, which a USB update used to leave as it was. On a Mnemo only ever updated over USB, the radio could be too old to reach the update server: **OTA UPDATE** said **No manifest. / Check server.** although WiFi worked. The v3.5.0 firmware file carries the radio's firmware: the first time the Mnemo starts after you install it over USB, it shows **RADIO UPDATE** and updates an older radio in about three minutes; keep it powered until **Radio updated.** See [Firmware Update](Firmware-Upgrade.md#manual-update).
+- **No magnet icon on the survey maps.** Turning the Mnemo to look around a survey's 3D map, from History, made the magnet (interference) icon flash, though nothing was being measured. Outside the maps the interference warning works as before. The History 2D map no longer flickers either.
+- **A stalled update gives up.** If the WiFi connection stalled in the middle of an **OTA UPDATE**, the Mnemo could wait for ever. It now gives up after about 15 seconds and says so. This applies from the update after this one, since this one is downloaded by the firmware you are running now.
+- **HOBO temperature loggers (an option).** Mnemos with the HOBO option download an Onset **HOBO MX2201** (Pendant MX) or **MX2203** (TidbiT MX Temp 400) temperature logger over Bluetooth, under water or on the surface, from **OPTIONS > TOOLS > HOBO**, and list the downloads on the web page as CSV files. The option is unlocked by a key made for your Mnemo. Without it, nothing changes. See [HOBO temperature loggers](Extras.md#hobo-temperature-loggers).
+- **Smaller fixes**:
+  - files the Mnemo saves on its WiFi radio keep their whole name and content: some lost their last character or last bytes;
+  - the `readfile` and `erasefile` [serial commands](Serial-CLI.md) refuse a file name longer than 28 characters, which the WiFi radio could not take.
+- **New in the error log**: `13-21` the battery calibration and recording could not be read at power-on (the standard values are used until the next power-on); `25-x` a HOBO download stopped answering and the Mnemo restarted (`x` says at which step); `26-x` the WiFi radio update after a USB install failed (`26-0`: the firmware file is damaged; install it over USB again).
+
+> Coming from **v3.4.1** or **v3.4.3**, this update arrives over WiFi as usual. Coming from **v3.4.0** it does too, but the download is still done by v3.4.0's code: if it fails part way, start **OTA UPDATE** again before you switch the Mnemo off (see the note under v3.4.1). Coming from **v3.1.1 or older**, the one-time USB update described in [Firmware Update](Firmware-Upgrade.md) is still needed before over-the-air updates work at all. If **OTA UPDATE** says **No manifest. / Check server.** although WiFi works, install this update over USB once: it updates the WiFi radio, and over-the-air updates work again after it.
+
 ## v3.4.3 ##
 
 *A release for the wheel: READY now tells you whether it is on the line, ECO no longer keeps it lit through every shot, and a shot no longer gains a tick as it ends.*
