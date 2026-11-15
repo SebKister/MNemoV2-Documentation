@@ -41,7 +41,56 @@ display is dimmed.
 
 - In **BASIC** and **Verbose** the MNemo then shuts itself down cleanly at the
   cutoff, ending the current section first.
+- The warning comes at **7.235 V** and the cutoff at **7.0 V**, or, on a MNemo that
+  has recorded its own battery *(v3.5.0+)*, at its **10%** and **5%**: see
+  [A battery gauge that knows your MNemo](#a-battery-gauge-that-knows-your-mnemo).
 - In **[ECO](ECO-Mode.md)** it does **not** — the icon is a warning, and the survey
   deliberately continues until the pack is empty. If the device dies mid-section,
   the next power-on reports **Survey recovered** and your shots are kept. See
   [ECO Mode](ECO-Mode.md).
+
+## A battery gauge that knows your MNemo *(v3.5.0+)* {#a-battery-gauge-that-knows-your-mnemo}
+
+Every MNemo uses the same voltages for its battery: 7.235 V for the low-battery
+warning and 7.0 V to switch itself off safely. Batteries differ, though, and on some
+MNemos 7.0 V still leaves a fifth of the battery unused: one we measured switched itself
+off with about **80 minutes** of battery left.
+
+Each MNemo can learn its own battery, with two [serial commands](Serial-CLI.md#battery)
+over the USB connection. Both are optional: if you never use them, nothing changes.
+
+### Correcting the battery reading
+
+Small differences between MNemos put the battery reading off by a percent or two, about
+0.08 V a percent. To correct it, measure the battery with a multimeter and send what it
+reads, for example:
+
+```
+calibratebattery 8.23
+```
+
+The MNemo answers with what it now reads, which should match your meter. The
+correction is kept through updates and a reset to defaults. `calibratebattery reset`
+removes it, and `calibratebattery` alone shows the reading, the percentage and the
+thresholds in use.
+
+### Recording the battery
+
+1. Charge the MNemo fully, switch WiFi off and go back to the main menu.
+2. Send `batterylog start`.
+3. When the screen says **Unplug the USB cable now**, unplug it: you have 20 seconds.
+   The screen turns white with **BATTERY TEST**, and the buttons do nothing.
+4. Leave it until the battery is empty and the MNemo switches off by itself: a few
+   hours (about six and a half on the MNemo we measured). Do not plug it back in
+   before that.
+5. Charge it and switch it on. From then on its battery percentage comes from this
+   recording, the low-battery warning shows at **10%**, and the MNemo switches itself
+   off at **5%**, wherever its battery runs out.
+
+`batterylog` alone shows the recording in use and the voltages its 10% and 5% come to.
+`batterylog dump` prints it as a table.
+
+While a recording runs, the MNemo keeps the one it already has. If you stop it
+(`batterylog stop`), plug the cable back in (it stops by itself after about two
+minutes), or the MNemo restarts, nothing is lost: only a battery that runs empty makes
+a new recording. `batterylog reset` goes back to the standard values.

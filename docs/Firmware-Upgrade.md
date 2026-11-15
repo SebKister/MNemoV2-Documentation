@@ -30,3 +30,18 @@ After every update — over WiFi or over USB — the MNemo shows a short **What'
 - Simply copy the firmware file you downloaded there. That should trigger a reboot of the Mnemo and install the new firmware.
 - After updating the firmware, disconnect from the computer and turn off the MNemo. 
 > The next time you turn the Mnemo on the new firmware will be fully functional.
+
+### The WiFi radio is updated too *(v3.5.0+)*
+
+The Mnemo's WiFi has its own firmware. From v3.5.0 the firmware file you install over
+USB carries it too. The first time the Mnemo starts after a USB install, it checks the
+radio and, if it is older, shows **RADIO UPDATE** and updates it: about **three
+minutes**, then **Radio updated.** Keep it powered until then. Your WiFi networks,
+surveys and settings are kept, and on a radio that is already up to date nothing
+happens at all. It never runs under water, and waits for a charged battery if yours is
+low. If it fails, it tries again at the next power-on, up to three times.
+
+> **OTA UPDATE says No manifest. / Check server. although WiFi works?** On a Mnemo only
+> ever updated over USB, the WiFi radio can be too old to reach the update server.
+> Install the latest firmware over USB once: it updates the radio, and over-the-air
+> updates work again after it.
