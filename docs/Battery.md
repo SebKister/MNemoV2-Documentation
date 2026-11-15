@@ -91,6 +91,6 @@ thresholds in use.
 `batterylog dump` prints it as a table.
 
 While a recording runs, the MNemo keeps the one it already has. If you stop it
-(`batterylog stop`), plug the cable back in (it stops by itself after about two
-minutes), or the MNemo restarts, nothing is lost: only a battery that runs empty makes
-a new recording. `batterylog reset` goes back to the standard values.
+(`batterylog stop`), leave the cable in (it stops by itself after about ten minutes, the
+battery not running down), or the MNemo restarts, nothing is lost: only a battery that
+runs empty makes a new recording. `batterylog reset` goes back to the standard values.
